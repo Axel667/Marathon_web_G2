@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SOLI'AUDE</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#Grap">Graphique</a></li> 
+                <li><a href="#Carte">Carte</a></li>
+                <li><a href="#Radar">Radar</a></li>
+                <li><a href="#Use">Utilisation</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    
+    <main>
+        <label for="x-axis-select">Axe X:</label>
+        <select id="x-axis-select"></select>
+        <label for="y-axis-select">Axe Y:</label>
+        <select id="y-axis-select"></select>
+        <div id="chart"></div>
+        <!-- Espace principal de visualisation -->
+        <div id="visu">
+            <svg id="graphique.js" width="960" height="500"></svg>
+        </div>
+    </main>
+
+
+    <aside>
+        <!-- Choix des variables -->
+        <section id="variable">
+
+
+        </section>
+
+        <section id="search">
+            <input type="search" placeholder="Rechercher..."> <!-- Champ de recherche -->
+            Résultats de Recherche
+        </section>
+    </aside>
+
+
+    <footer>
+        <!-- Contrôles et informations supplémentaires -->
+        <div id="additional-controls">Contrôles Supplémentaires</div>
+    </footer>
+</body>
+</html>
