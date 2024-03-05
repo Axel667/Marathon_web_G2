@@ -1,90 +1,27 @@
-/* Réinitialisation de base */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
 body {
-    font-family: Arial, sans-serif;
-}
-
-/* Style de l'en-tête */
-header {
-    background: #f2f2f2;
-    padding: 10px 0;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-}
-
-nav ul {
-    list-style: none;
     display: flex;
-    justify-content: center;
+    flex-direction: row;
+    margin: 0;
 }
 
-nav ul li {
-    padding: 0 20px;
-}
-
-nav ul li a {
-    text-decoration: none;
-    color: #333;
-    font-weight: bold;
-}
-
-/* Style de la zone de contenu principale */
-main {
+#graph {
+    flex: 1;
     padding: 20px;
-    background: #fff;
-    min-height: 500px; /* Hauteur de l'espace réservé */
-    text-align: center;
 }
 
-/* Style de la barre latérale droite */
-aside {
-    position: fixed;
-    top: 60px; /* Ajuster en fonction de la hauteur de l'en-tête */
-    right: 0;
-    width: 300px;
-    background: #e3e3e3;
+#carte {
+    flex: 1;
     padding: 20px;
-    height: calc(100% - 60px); /* Ajuster en fonction de la hauteur de l'en-tête */
 }
 
-/* Style du pied de page */
-footer {
-    background: #ddd;
-    padding: 10px;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    text-align: center;
+#graphique.js {
+    max-width: 100%;
+    height: auto;
 }
 
-/* Contrôles supplémentaires dans le pied de page */
-#additional-controls {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+#divmap {
+    width: 900px;
+    height: 500px;
+    border: 3px solid gray;
 }
 
-/* Ajustements pour la réactivité */
-@media (max-width: 768px) {
-    aside {
-        width: 100%;
-        height: auto;
-        position: static;
-        padding: 10px;
-    }
-
-    footer {
-        position: static;
-    }
-
-    nav ul {
-        flex-direction: column;
-    }
-
-    nav ul li {
-        padding: 10px 0;
-    }
-}

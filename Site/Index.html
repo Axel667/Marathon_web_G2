@@ -6,51 +6,37 @@
     <title>SOLI'AUDE</title>
     <link rel="stylesheet" href="css/style.css">
     <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="leaflet/leaflet.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="graphique.js"></script>
+    <script src="carte.js"></script>
 </head>
 
 <body>
     <header>
-        <nav>
-            <ul>
-                <li><a href="#Grap">Graphique</a></li> 
-                <li><a href="#Carte">Carte</a></li>
-                <li><a href="#Radar">Radar</a></li>
-                <li><a href="#Use">Utilisation</a></li>
-            </ul>
-        </nav>
     </header>
 
     
-    <main>
+    <div id="graph">
         <label for="x-axis-select">Axe X:</label>
         <select id="x-axis-select"></select>
+        
         <label for="y-axis-select">Axe Y:</label>
         <select id="y-axis-select"></select>
         <div id="chart"></div>
         <!-- Espace principal de visualisation -->
-        <div id="visu">
-            <svg id="graphique.js" width="960" height="500"></svg>
+        <div id="visu-graph">
+            <svg id="graphique.js" width="1000" height="500"></svg>
         </div>
-    </main>
+    </div>
 
-
-    <aside>
-        <!-- Choix des variables -->
-        <section id="variable">
-
-
-        </section>
-
-        <section id="search">
-            <input type="search" placeholder="Rechercher..."> <!-- Champ de recherche -->
-            Résultats de Recherche
-        </section>
-    </aside>
+    <div id="carte">
+        <div id="divmap"></div>
+        <svg id="carte.js" width="1000" height="500"></svg>
+    </div>
 
 
     <footer>
-        <!-- Contrôles et informations supplémentaires -->
-        <div id="additional-controls">Contrôles Supplémentaires</div>
     </footer>
 </body>
 </html>
