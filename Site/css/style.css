@@ -2,6 +2,7 @@ body {
     display: flex;
     flex-direction: row;
     margin: 0;
+    align-items: flex-end; /* Ajout de cette ligne */
 }
 
 #graph {

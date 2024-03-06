@@ -2,6 +2,7 @@ d3.json("donnees-convert.json").then(function(data) {
     const margin = {top: 40, right: 20, bottom: 70, left: 100},
           width = 1100 - margin.left - margin.right,
           height = 700 - margin.top - margin.bottom;
+          
     const svg = d3.select("#chart").append("svg")
         .attr("width", width + margin.left + margin.right)
         .attr("height", height + margin.top + margin.bottom)

@@ -3,14 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tableau de Bord de Visualisation</title>
+    <title>Soli'Aude</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"/>
+    <link rel="icon" type="image/png" href="../CNO/LOGO.svg"/> 
     <script src="https://d3js.org/d3.v7.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
 </head>
 <body>
+    <header>
+        <div id="logo-container">
+            <img src="../CNO/LOGO.svg" alt="Logo Soli'Aude" id="logo">
+            <img src="../CNO/header-newsletter.png" alt="header Soli'Aude" id="logo2">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#bubbles">Présentation</a></li>
+                <li><a href="#facts">Graphiques</a></li>
+                <li><a href="#teach">Indicateur</a></li>
+                <li><a href="#about">Utilisation</a></li>
+            </ul>
+        </nav>
+    </header>
+ 
     <div class="dashboard">
         <div id="chart-container" class="viz-container" style="width: 50%; float: left;">
             <!-- Ajout des sélecteurs pour les axes X et Y -->

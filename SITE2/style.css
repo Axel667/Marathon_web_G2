@@ -1,8 +1,66 @@
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    padding: 10px;
+    border-bottom: 8px solid #ccc;
+    border-image: linear-gradient(to right, 
+        #e97804 0%, #e97804 20%, 
+        #fcf5ef 20%, #fcf5ef 26.7%,
+        #fab613 26.7%, #fab613 46.7%, 
+        #fcf5ef 46.7%, #fcf5ef 53.4%,
+        #8ecae6 53.4%, #8ecae6 73.4%, 
+        #fcf5ef 73.4%, #fcf5ef 80%,
+        #2984ce 80%, #2984ce 100%);
+    border-image-slice: 1;
+    background-color:antiquewhite;
+}
+
+#logo-container {
+    display: flex;
+    align-items: center; /* Aligner les éléments verticalement au centre */
+}
+
+#logo {
+    max-width: 100px; /* Ajustez la largeur maximale selon vos besoins */
+    height: auto;
+    order: 1; /* Le logo sera le deuxième élément dans l'ordre de flex */
+    margin-left:50px
+}
+
+#logo2 {
+    max-width: 300px; /* Ajustez la largeur maximale selon vos besoins */
+    height: auto;
+    order: 2; /* Le logo sera le deuxième élément dans l'ordre de flex */
+    margin-left: auto;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    padding: 0 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
 body { font: 12px Arial; }
+
 .dashboard {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    margin-top: 180px
 }
 
 .viz-container {
@@ -19,7 +77,7 @@ body { font: 12px Arial; }
 #chart {
     /* Ajustez ces valeurs selon vos besoins */
     transform-origin: top left;
-    transform: scale(0.5); /* Réduit le graphique à 80% de sa taille originale */
+    transform: scale(0.7); /* Réduit le graphique à 80% de sa taille originale */
 }
 
 #divmap, #chart {
@@ -55,7 +113,7 @@ body { font: 12px Arial; }
     display: flex;
     flex-direction: column; /* Organiser les enfants en colonne */
     align-items: flex-start; /* Aligner les enfants au début (gauche) */
-    margin-bottom: 20px; /* Espacer le conteneur des contrôles du reste du contenu */
+    margin-bottom: 1000px; /* Espacer le conteneur des contrôles du reste du contenu */
 }
 
 .control-group {
