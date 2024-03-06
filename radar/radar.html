@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Interactive Map Visualization</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+    <style>
+        .tooltip {
+            position: absolute;
+            text-align: center;
+            width: 60px;
+            height: 28px;
+            padding: 2px;
+            font: 12px sans-serif;
+            background: lightsteelblue;
+            border: 0px;
+            border-radius: 8px;
+            pointer-events: none;
+            opacity: 0;
+        }
+    </style>
+</head>
+<body>
+    <div id="radar-chart"></div>
+    <div class="tooltip"></div>
+    <script>
+// Function to create the radar plot
+function createRadarChart(cityData, featureRanges) {
+    var width = 500, height = 500, radius = Math.min(width, height) / 2;
+    var svg = d3.select("#radar-chart").append("svg")
+                .attr("width", width)
+                .attr("height", height)
+                .append("g")
+                .attr("transform", "translate(" + width / 2 + "," + height / 2 + ")");
+    
+    var tooltip = d3.select(".tooltip");
+
+    // Normalize the data of the first city
+    var normalizedData = {};
+    for (var feature in featureRanges) {
+        var value = cityData[feature];
+        var range = featureRanges[feature];
+        normalizedData[feature] = 1 + (99 * (value - range.min) / (range.max - range.min));
+    }
+
+    // Selected features
+    var features = Object.keys(normalizedData);
+    var angleSlice = Math.PI * 2 / features.length;
+    var scales = d3.scaleLinear().domain([1, 100]).range([0, radius]);
+
+    // Create axes (spokes) with scale
+    features.forEach(function(feature, i) {
+        var axis = svg.append("g")
+                      .attr("class", "axis")
+                      .attr("transform", "rotate(" + (i * 360 / features.length) + ")");
+
+        axis.selectAll("line")
+            .data(d3.range(1, 101, 10)) // Adjust this value for the number of scales on the axes
+            .enter()
+            .append("line")
+            .attr("x1", function(d) { return scales(d); })
+            .attr("y1", 0)
+            .attr("x2", function(d) { return scales(d); })
+            .attr("y2", -5)
+            .attr("stroke", "grey");
+
+        // Append axis title
+        axis.append("text")
+            .attr("class", "axis-label")
+            .attr("x", scales(100))
+            .attr("y", -10)
+            .attr("text-anchor", "middle")
+            .text(feature);
+    });
+
+    // Draw the radar chart blob
+    var radarLine = d3.lineRadial()
+        .radius(function(d, i) { return scales(normalizedData[features[i]]); })
+        .angle(function(d, i) { return i * angleSlice; })
+        .curve(d3.curveLinearClosed);
+
+    // Append the radar chart blob
+    svg.append("path")
+        .datum(features)
+        .attr("d", radarLine)
+        .style("fill", "steelblue")
+        .style("fill-opacity", 0.2);
+
+    // Create data points and tooltip
+    features.forEach(function(feature, i) {
+        var angle = i * angleSlice;
+        var x = scales(normalizedData[feature]) * Math.cos(angle);
+        var y = scales(normalizedData[feature]) * Math.sin(angle);
+
+        svg.append("circle")
+            .attr("cx", x)
+            .attr("cy", y)
+            .attr("r", 5)
+            .style("fill", "navy")
+            .on("mouseover", function(event) {
+                tooltip.style("opacity", 1);
+                tooltip.html(feature + "<br>Original: " + cityData[feature] + "<br>Scaled: " + normalizedData[feature].toFixed(2))
+                    .style("left", (event.pageX + 5) + "px")
+                    .style("top", (event.pageY - 28) + "px");
+            })
+            .on("mouseout", function() {
+                tooltip.style("opacity", 0);
+            });
+    });
+}
+
+// Load JSON data using jQuery
+$.getJSON('data.json', function(data) {
+    // Calculate min and max for each feature
+    var features = ["Densité de population 2020", "Potentiel financier 2023", "Médiane du revenu disponible par UC 2020"];
+    var featureRanges = calculateFeatureRanges(data, features);
+    createRadarChart(data[0], featureRanges);
+}).fail(function() {
+    console.error("Error loading the JSON file.");
+});
+
+// Function to calculate feature ranges
+function calculateFeatureRanges(data, features) {
+    var featureRanges = {};
+    features.forEach(function(feature) {
+        var values = data.map(function(city) { return city[feature]; });
+        featureRanges[feature] = {
+            min: Math.min.apply(null, values),
+            max: Math.max.apply(null, values)
+        };
+    });
+    return featureRanges;
+}
+
+    </script>
+</body>
+</html>
