@@ -1,0 +1,21 @@
+import pandas as pd
+
+# Remplacez 'chemin_vers_votre_fichier' par le chemin de votre fichier Excel
+fichier_excel = 'Données.xlsx'
+
+# Importation du fichier Excel
+df1 = pd.read_excel(fichier_excel, header=4)
+
+# Affichage des premières lignes du DataFrame
+#print(df1.describe())
+#print(df1)
+
+# Supprimer la colonne 'Code'
+df1 = df1.drop('Code', axis=1)
+
+# Définir la colonne 'Libellé' comme nouvel index du DataFrame
+df1 = df1.set_index('Libellé')
+
+# Afficher les premières lignes pour vérifier les modifications
+print(df1.describe())
+print(df['NomDeLaColonne'].describe())
