@@ -1,0 +1,99 @@
+body { font: 12px Arial; }
+.dashboard {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.viz-container {
+    flex: 1;
+}
+
+#chart-container, #map-container {
+    flex: 1;
+    min-width: 45%; /* Ajustez cette valeur selon vos besoins */
+    height: 500px; /* Hauteur fixe pour simplifier */
+    padding: 10px;
+}
+
+#chart {
+    /* Ajustez ces valeurs selon vos besoins */
+    transform-origin: top left;
+    transform: scale(0.5); /* Réduit le graphique à 80% de sa taille originale */
+}
+
+#divmap, #chart {
+    height: 100%;
+    width: 100%;
+}
+
+#map-container {
+    width: 50%; /* ou la largeur souhaitée */
+    float: right; /* Continue à flotter à droite */
+    transform-origin: top right; /* Change le point d'origine pour les transformations */
+    transform: scale(0.9); /* Ajustez la mise à l'échelle si nécessaire */
+}
+
+.tooltip {
+    position: absolute;
+    text-align: center;
+    padding: 6px;
+    font: 12px sans-serif;
+    background: lightsteelblue;
+    border: 0px;
+    border-radius: 8px;
+    pointer-events: none;
+    opacity: 0;
+}
+.zoom {
+    cursor: move;
+    fill: none;
+    pointer-events: all;
+}
+
+.controls-container {
+    display: flex;
+    flex-direction: column; /* Organiser les enfants en colonne */
+    align-items: flex-start; /* Aligner les enfants au début (gauche) */
+    margin-bottom: 20px; /* Espacer le conteneur des contrôles du reste du contenu */
+}
+
+.control-group {
+    margin-bottom: 10px; /* Espacer chaque groupe de contrôle verticalement */
+}
+
+/* Style optionnel pour les sélecteurs et étiquettes pour une apparence uniforme */
+label, select {
+    display: block; /* Assure que les sélecteurs prennent toute la largeur du conteneur */
+    margin-bottom: 5px; /* Espacer légèrement les étiquettes des sélecteurs */
+}
+
+select {
+    width: 100%; /* Assurer que les sélecteurs utilisent toute la largeur disponible */
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+.legend {
+    padding: 6px 8px;
+    font: 14px Arial, Helvetica, sans-serif;
+    background: white;
+    background: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    line-height: 24px;
+    color: #555;
+}
+.legend i {
+    width: 18px;
+    height: 18px;
+    float: left;
+    margin-right: 8px;
+    opacity: 0.7;
+}
+
+.circle {
+    fill: none; /* Pas de remplissage */
+    stroke: darkblue; /* Couleur des contours */
+    stroke-width: 2px; /* Épaisseur des contours */
+}
