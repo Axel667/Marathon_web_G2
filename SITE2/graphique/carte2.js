@@ -66,8 +66,8 @@ document.addEventListener("DOMContentLoaded", function() {
 
     var geojsonLayer;
 
-    $.getJSON("communes-11-aude.geojson", function(geoJsonData) {
-        $.getJSON("data.json", function(populationData) {
+    $.getJSON("../data/communes-11-aude.geojson", function(geoJsonData) {
+        $.getJSON("../data/data.json", function(populationData) {
             populationData.forEach(function(item) {
                 var geoFeature = geoJsonData.features.find(function(feature) {
                     return feature.properties.nom === item["Libellé"];

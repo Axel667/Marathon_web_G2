@@ -1,0 +1,376 @@
+/* Haut du site */
+header {
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    width: 100%;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.6);
+    padding: 0 20px;
+    border-bottom: 8px solid #ccc;
+    border-image: linear-gradient(to right, 
+        #e97804 0%, #e97804 20%, 
+        #fcf5ef 20%, #fcf5ef 26.7%,
+        #fab613 26.7%, #fab613 46.7%, 
+        #fcf5ef 46.7%, #fcf5ef 53.4%,
+        #8ecae6 53.4%, #8ecae6 73.4%, 
+        #fcf5ef 73.4%, #fcf5ef 80%,
+        #2984ce 80%, #2984ce 100%);
+    border-image-slice: 1;
+    background-image: url('../CNO/Barre_de_naviguation.svg');
+    background-position: center;
+    background-size: 140%;
+}
+
+
+
+/* Boutons naviguation */
+nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+nav li {
+    margin-right: 40px;
+    margin-left: 10px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #000;
+    font-family: 'Avenir', sans-serif;
+    font-weight: bold;
+    padding: 8px 80px;
+    border-radius: 10px;
+    border: 1px solid;
+    border-color: #00000000;
+}
+
+nav ul li:first-child a img {
+    max-width: 400px;
+    height: auto;
+    display: flex;
+    align-items: left;
+    justify-content: space-between;
+}
+
+nav ul li:nth-child(2) a {
+    background-color: #fff;
+}
+nav ul li:nth-child(2) a:hover {
+    background-color: #e97804;
+    color: #000;
+}
+nav ul li:nth-child(2) a.active {
+    background-color: #e97804;
+    color: #000;
+    transform: scale(1.1);
+}
+
+
+nav ul li:nth-child(3) a {
+    background-color: #fff;
+}
+
+nav ul li:nth-child(3) a:hover {
+    background-color: #fab613;
+    color: #000;
+}
+nav ul li:nth-child(3) a.active {
+    background-color: #fab613;
+    color: #000;
+    transform: scale(1.1);
+}
+
+
+nav ul li:nth-child(4) a {
+    background-color: #fff;
+}
+
+nav ul li:nth-child(4) a:hover {
+    background-color: #8ecae6;
+    color: #000;
+}
+nav ul li:nth-child(4) a.active {
+    background-color: #8ecae6;
+    color: #000;
+    transform: scale(1.1);
+}
+
+
+nav ul li:nth-child(5) a {
+    background-color: #fff;
+}
+
+nav ul li:nth-child(5) a:hover {
+    background-color: #2984ce;
+    color: #000;
+}
+nav ul li:nth-child(5) a.active {
+    background-color: #2984ce;
+    color: #fff;
+    transform: scale(1.1);
+}
+
+
+nav ul li:nth-child(6) a img {
+    height: 60px;
+    width: 60px;
+    border-radius: 30%;
+    padding: 0px;
+}
+
+
+
+
+
+/* Body */
+
+body { font: 12px Arial;
+    margin-bottom: 1000px;}
+
+
+
+
+
+/* Presentation */
+#myVideo {
+    position: relative; /* Change from fixed to relative */
+    left: 50%; /* Position at the middle of the page */
+    transform: translate(-50%, 35%); /* Center the video */
+    width: 100%; /* Width of the video */
+    height: 500px; /* Height of the video */
+}
+
+
+
+
+
+/* Calculateur */
+#calculateur {
+    margin-top: 180px; /* Ajustez la marge en haut selon la hauteur du header */
+    margin-right: 800px;;
+    padding: 0px;
+    background-color: #f4f4f4; /* Couleur de fond pour le div calculateur */
+}
+
+#score2 {
+    /* Add your desired styling for the score container */
+    background-color: #f0f0f0;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-top: 10px;
+    width: 100px; /* Adjust the width as needed */
+    text-align: center;
+}
+
+
+
+
+
+
+/* A propos  */
+
+main{
+    margin-top: 180px;
+    margin-left: 250px;
+    margin-right: 200px;
+}
+
+h1 {
+    display: inline-block;
+    font-family: 'Avenir', sans-serif;
+    font-size: 40px;
+    margin: 0;
+}
+
+.title .traits span {
+    display: block;
+    height: 4px; /* Hauteur du trait */
+    background-color: #fab613; /* Couleur du trait */
+    margin: 5px 0; /* Espace autour du trait */
+    width: 250px;
+}
+
+.title .traits2 span {
+    display: block;
+    height: 4px; /* Hauteur du trait */
+    background-color: #d14816; /* Couleur du trait */
+    margin: 5px 0; /* Espace autour du trait */
+    width: 350px;
+}
+
+.content {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    margin-top: 0px;
+}
+
+.content img {
+    max-width: 100%;
+    max-height: 250px;
+    height: auto;
+    margin-right: 20px;
+    border-radius: 15px;
+}
+
+.text {
+    color: #000;
+    border-bottom: 2px solid #fff;
+    display: inline-block;
+    padding-bottom: 10px;
+    font-family: 'Avenir', sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.text p {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.compare {
+    font-size: 2em;
+    color: #e97804;
+    vertical-align: middle; /* Couleur de la comparaison */
+    margin-right: 5px;
+}
+
+.evaluate {
+    font-size: 2em;
+    color: #fab613;
+    vertical-align: middle; /* Couleur de l'évaluation */
+    margin-right: 5px;
+}
+
+.innovate {
+    font-size: 2em;
+    color: #8ecae6;
+    vertical-align: middle; /* Couleur de l'innovation */
+    margin-right: 5px;
+}
+
+.improve {
+    font-size: 2em;
+    color: #2984ce;
+    vertical-align: middle; /* Couleur de l'amélioration */
+    margin-right: 5px;
+}
+
+.textbox {
+    padding: 20px;
+}
+
+.textbox p {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+
+
+
+
+
+/* Graphiques : */
+.dashboard {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 180px
+}
+
+.viz-container {
+    flex: 1;
+}
+
+#chart-container, #map-container {
+    flex: 1;
+    min-width: 45%; /* Ajustez cette valeur selon vos besoins */
+    height: 500px; /* Hauteur fixe pour simplifier */
+    padding: 10px;
+}
+
+#chart {
+    /* Ajustez ces valeurs selon vos besoins */
+    transform-origin: top left;
+    transform: scale(0.7); /* Réduit le graphique à 80% de sa taille originale */
+}
+
+#divmap, #chart {
+    height: 100%;
+    width: 100%;
+}
+
+#map-container {
+    width: 50%; /* ou la largeur souhaitée */
+    float: right; /* Continue à flotter à droite */
+    transform-origin: top right; /* Change le point d'origine pour les transformations */
+    transform: scale(0.9); /* Ajustez la mise à l'échelle si nécessaire */
+    z-index: 1;
+}
+
+.tooltip {
+    position: absolute;
+    text-align: center;
+    padding: 6px;
+    font: 12px sans-serif;
+    background: lightsteelblue;
+    border: 0px;
+    border-radius: 8px;
+    pointer-events: none;
+    opacity: 0;
+}
+.zoom {
+    cursor: move;
+    fill: none;
+    pointer-events: all;
+}
+
+.controls-container {
+    display: flex;
+    flex-direction: column; /* Organiser les enfants en colonne */
+    align-items: flex-start; /* Aligner les enfants au début (gauche) */
+    margin-bottom: 1000px; /* Espacer le conteneur des contrôles du reste du contenu */
+}
+
+.control-group {
+    margin-bottom: 10px; /* Espacer chaque groupe de contrôle verticalement */
+}
+
+/* Style optionnel pour les sélecteurs et étiquettes pour une apparence uniforme */
+label, select {
+    display: block; /* Assure que les sélecteurs prennent toute la largeur du conteneur */
+    margin-bottom: 5px; /* Espacer légèrement les étiquettes des sélecteurs */
+}
+
+select {
+    width: 100%; /* Assurer que les sélecteurs utilisent toute la largeur disponible */
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+.legend {
+    padding: 6px 8px;
+    font: 14px Arial, Helvetica, sans-serif;
+    background: white;
+    background: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    line-height: 24px;
+    color: #555;
+}
+.legend i {
+    width: 18px;
+    height: 18px;
+    float: left;
+    margin-right: 8px;
+    opacity: 0.7;
+}
+
+.circle {
+    fill: none; /* Pas de remplissage */
+    stroke: darkblue; /* Couleur des contours */
+    stroke-width: 2px; /* Épaisseur des contours */
+}

@@ -1,4 +1,4 @@
-d3.json("donnees-convert.json").then(function(data) {
+d3.json("../data/donnees-convert.json").then(function(data) {
     const margin = {top: 40, right: 20, bottom: 70, left: 100},
           width = 1100 - margin.left - margin.right,
           height = 700 - margin.top - margin.bottom;
