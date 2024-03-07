@@ -1,0 +1,35 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+#chart {
+    width: 600px;
+    height: 400px;
+}
+
+select {
+    margin: 5px;
+}
+
+.axis line,
+.axis path {
+    stroke: black;
+}
+
+.axis text {
+    font-size: 12px;
+}
+
+#chart {
+    width: 600px;
+    height: 400px;
+}
+
+select {
+    margin: 5px;
+}
