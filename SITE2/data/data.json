@@ -86,7 +86,7 @@
   {
     "Code": 11005,
     "Libellé": "Alairac",
-    "Population": "1 396",
+    "Population": 1396,
     "Densité de population 2020": 81.73,
     "Potentiel financier 2023": 754568,
     "Médiane du revenu disponible par UC 2020": 21650,
@@ -170,7 +170,7 @@
   {
     "Code": 11009,
     "Libellé": "Alzonne",
-    "Population": "1 619",
+    "Population": 1619,
     "Densité de population 2020": 71.13,
     "Potentiel financier 2023": 1501528,
     "Médiane du revenu disponible par UC 2020": 19160,
@@ -233,7 +233,7 @@
   {
     "Code": 11012,
     "Libellé": "Argeliers",
-    "Population": "2 176",
+    "Population": 2176,
     "Densité de population 2020": 199.72,
     "Potentiel financier 2023": 1508064,
     "Médiane du revenu disponible par UC 2020": 20810,
@@ -275,7 +275,7 @@
   {
     "Code": 11014,
     "Libellé": "Armissan",
-    "Population": "1 517",
+    "Population": 1517,
     "Densité de population 2020": 119.5,
     "Potentiel financier 2023": 1014333,
     "Médiane du revenu disponible par UC 2020": 22610,
@@ -359,7 +359,7 @@
   {
     "Code": 11018,
     "Libellé": "Arzens",
-    "Population": "1 236",
+    "Population": 1236,
     "Densité de population 2020": 57.37,
     "Potentiel financier 2023": 1002660,
     "Médiane du revenu disponible par UC 2020": 22090,
@@ -443,7 +443,7 @@
   {
     "Code": 11022,
     "Libellé": "Azille",
-    "Population": "1 155",
+    "Population": 1155,
     "Densité de population 2020": 48.14,
     "Potentiel financier 2023": 911160,
     "Médiane du revenu disponible par UC 2020": 19100,
@@ -674,7 +674,7 @@
   {
     "Code": 11033,
     "Libellé": "Belpech",
-    "Population": "1 371",
+    "Population": 1371,
     "Densité de population 2020": 31.54,
     "Potentiel financier 2023": 832879,
     "Médiane du revenu disponible par UC 2020": 20120,
@@ -799,7 +799,7 @@
   },
   {
     "Code": 11039,
-    "Libellé": "La Bezole",
+    "Libellé": "Bezole",
     "Population": 50,
     "Densité de population 2020": 7.22,
     "Potentiel financier 2023": 32368,
@@ -821,7 +821,7 @@
   {
     "Code": 11040,
     "Libellé": "Bizanet",
-    "Population": "1 795",
+    "Population": 1795,
     "Densité de population 2020": 47.29,
     "Potentiel financier 2023": 1072287,
     "Médiane du revenu disponible par UC 2020": 20860,
@@ -842,7 +842,7 @@
   {
     "Code": 11041,
     "Libellé": "Bize-Minervois",
-    "Population": "1 273",
+    "Population": 1273,
     "Densité de population 2020": 59.76,
     "Potentiel financier 2023": 972990,
     "Médiane du revenu disponible par UC 2020": 20520,
@@ -967,7 +967,7 @@
   },
   {
     "Code": 11047,
-    "Libellé": "Le Bousquet",
+    "Libellé": "Bousquet",
     "Population": 50,
     "Densité de population 2020": 1.85,
     "Potentiel financier 2023": 102488,
@@ -1010,7 +1010,7 @@
   {
     "Code": 11049,
     "Libellé": "Bram",
-    "Population": "3 309",
+    "Population": 3309,
     "Densité de population 2020": 182.05,
     "Potentiel financier 2023": 3048371,
     "Médiane du revenu disponible par UC 2020": 20720,
@@ -1093,7 +1093,7 @@
   },
   {
     "Code": 11054,
-    "Libellé": "Les Brunels",
+    "Libellé": "Brunels",
     "Population": 279,
     "Densité de population 2020": 22.47,
     "Potentiel financier 2023": 188899,
@@ -1367,7 +1367,7 @@
   {
     "Code": 11067,
     "Libellé": "Canet",
-    "Population": "1 854",
+    "Population": 1854,
     "Densité de population 2020": 130.48,
     "Potentiel financier 2023": 1226986,
     "Médiane du revenu disponible par UC 2020": 20910,
@@ -1388,7 +1388,7 @@
   {
     "Code": 11068,
     "Libellé": "Capendu",
-    "Population": "1 510",
+    "Population": 1510,
     "Densité de population 2020": 97.42,
     "Potentiel financier 2023": 1072623,
     "Médiane du revenu disponible par UC 2020": 18320,
@@ -1409,7 +1409,7 @@
   {
     "Code": 11069,
     "Libellé": "Carcassonne",
-    "Population": "47 345",
+    "Population": 47345,
     "Densité de population 2020": 717.16,
     "Potentiel financier 2023": 52443343,
     "Médiane du revenu disponible par UC 2020": 18800,
@@ -1471,7 +1471,7 @@
   },
   {
     "Code": 11072,
-    "Libellé": "La Cassaigne",
+    "Libellé": "Cassaigne",
     "Population": 180,
     "Densité de population 2020": 13.44,
     "Potentiel financier 2023": 126873,
@@ -1513,7 +1513,7 @@
   },
   {
     "Code": 11074,
-    "Libellé": "Les Cassés",
+    "Libellé": "Cassés",
     "Population": 322,
     "Densité de population 2020": 42.17,
     "Potentiel financier 2023": 163102,
@@ -1556,7 +1556,7 @@
   {
     "Code": 11076,
     "Libellé": "Castelnaudary",
-    "Population": "12 974",
+    "Population": 12974,
     "Densité de population 2020": 261.25,
     "Potentiel financier 2023": 13276975,
     "Médiane du revenu disponible par UC 2020": 19450,
@@ -1661,7 +1661,7 @@
   {
     "Code": 11081,
     "Libellé": "Caunes-Minervois",
-    "Population": "1 610",
+    "Population": 1610,
     "Densité de population 2020": 57.51,
     "Potentiel financier 2023": 1146672,
     "Médiane du revenu disponible par UC 2020": 19030,
@@ -1724,7 +1724,7 @@
   {
     "Code": 11084,
     "Libellé": "Caux-et-Sauzens",
-    "Population": "1 024",
+    "Population": 1024,
     "Densité de population 2020": 111.67,
     "Potentiel financier 2023": 623849,
     "Médiane du revenu disponible par UC 2020": 20380,
@@ -1745,7 +1745,7 @@
   {
     "Code": 11085,
     "Libellé": "Cavanac",
-    "Population": "1 028",
+    "Population": 1028,
     "Densité de population 2020": 107.14,
     "Potentiel financier 2023": 757593,
     "Médiane du revenu disponible par UC 2020": 22180,
@@ -1808,7 +1808,7 @@
   {
     "Code": 11088,
     "Libellé": "Cazilhac",
-    "Population": "1 696",
+    "Population": 1696,
     "Densité de population 2020": 428.2,
     "Potentiel financier 2023": 1338762,
     "Médiane du revenu disponible par UC 2020": 24090,
@@ -1871,7 +1871,7 @@
   {
     "Code": 11091,
     "Libellé": "Chalabre",
-    "Population": "1 158",
+    "Population": 1158,
     "Densité de population 2020": 73.53,
     "Potentiel financier 2023": 912685,
     "Médiane du revenu disponible par UC 2020": 18470,
@@ -1912,7 +1912,7 @@
   },
   {
     "Code": 11093,
-    "Libellé": "Le Clat",
+    "Libellé": "Clat",
     "Population": 29,
     "Densité de population 2020": 2.73,
     "Potentiel financier 2023": 76762,
@@ -2018,7 +2018,7 @@
   {
     "Code": 11099,
     "Libellé": "Conques-sur-Orbiel",
-    "Population": "2 623",
+    "Population": 2623,
     "Densité de population 2020": 103.11,
     "Potentiel financier 2023": 1606438,
     "Médiane du revenu disponible par UC 2020": 21040,
@@ -2038,7 +2038,7 @@
   },
   {
     "Code": 11100,
-    "Libellé": "Corbières",
+    "Libellé": "Conilhac-Corbières",
     "Population": 34,
     "Densité de population 2020": 3.4,
     "Potentiel financier 2023": 24273,
@@ -2102,7 +2102,7 @@
   {
     "Code": 11103,
     "Libellé": "Couiza",
-    "Population": "1 147",
+    "Population": 1147,
     "Densité de population 2020": 165.73,
     "Potentiel financier 2023": 889660,
     "Médiane du revenu disponible par UC 2020": 18540,
@@ -2165,7 +2165,7 @@
   {
     "Code": 11106,
     "Libellé": "Coursan",
-    "Population": "5 846",
+    "Population": 5846,
     "Densité de population 2020": 235.07,
     "Potentiel financier 2023": 3968418,
     "Médiane du revenu disponible par UC 2020": 20200,
@@ -2206,7 +2206,7 @@
   },
   {
     "Code": 11108,
-    "Libellé": "La Courtète",
+    "Libellé": "Courtète",
     "Population": 47,
     "Densité de population 2020": 8.41,
     "Potentiel financier 2023": 41090,
@@ -2375,7 +2375,7 @@
   {
     "Code": 11116,
     "Libellé": "Cuxac-d'Aude",
-    "Population": "4 117",
+    "Population": 4117,
     "Densité de population 2020": 187.74,
     "Potentiel financier 2023": 2949275,
     "Médiane du revenu disponible par UC 2020": 19800,
@@ -2437,7 +2437,7 @@
   },
   {
     "Code": 11119,
-    "Libellé": "La Digne-d'Amont",
+    "Libellé": "Digne-d'Amont",
     "Population": 296,
     "Densité de population 2020": 81.16,
     "Potentiel financier 2023": 193019,
@@ -2458,7 +2458,7 @@
   },
   {
     "Code": 11120,
-    "Libellé": "La Digne-d'Aval",
+    "Libellé": "Digne-d'Aval",
     "Population": 542,
     "Densité de population 2020": 167.83,
     "Potentiel financier 2023": 320312,
@@ -2648,7 +2648,7 @@
   {
     "Code": 11129,
     "Libellé": "Espéraza",
-    "Population": "1 732",
+    "Population": 1732,
     "Densité de population 2020": 162.74,
     "Potentiel financier 2023": 1147347,
     "Médiane du revenu disponible par UC 2020": 18110,
@@ -2711,7 +2711,7 @@
   {
     "Code": 11132,
     "Libellé": "Fabrezan",
-    "Population": "1 275",
+    "Population": 1275,
     "Densité de population 2020": 43.89,
     "Potentiel financier 2023": 884909,
     "Médiane du revenu disponible par UC 2020": 19420,
@@ -2773,7 +2773,7 @@
   },
   {
     "Code": 11135,
-    "Libellé": "La Fajolle",
+    "Libellé": "Fajolle",
     "Population": 12,
     "Densité de population 2020": 0.76,
     "Potentiel financier 2023": 46852,
@@ -2879,7 +2879,7 @@
   {
     "Code": 11140,
     "Libellé": "Ferrals-les-Corbières",
-    "Population": "1 288",
+    "Population": 1288,
     "Densité de population 2020": 78.75,
     "Potentiel financier 2023": 763757,
     "Médiane du revenu disponible par UC 2020": 19660,
@@ -2963,7 +2963,7 @@
   {
     "Code": 11144,
     "Libellé": "Fitou",
-    "Population": "1 138",
+    "Population": 1138,
     "Densité de population 2020": 36.23,
     "Potentiel financier 2023": 1255367,
     "Médiane du revenu disponible par UC 2020": 19530,
@@ -2984,7 +2984,7 @@
   {
     "Code": 11145,
     "Libellé": "Fleury",
-    "Population": "3 937",
+    "Population": 3937,
     "Densité de population 2020": 72.42,
     "Potentiel financier 2023": 7592951,
     "Médiane du revenu disponible par UC 2020": 20560,
@@ -3151,7 +3151,7 @@
   },
   {
     "Code": 11153,
-    "Libellé": "La Force",
+    "Libellé": "Force",
     "Population": 265,
     "Densité de population 2020": 54.35,
     "Potentiel financier 2023": 175629,
@@ -3383,7 +3383,7 @@
   {
     "Code": 11164,
     "Libellé": "Ginestas",
-    "Population": "1 568",
+    "Population": 1568,
     "Densité de population 2020": 159.47,
     "Potentiel financier 2023": 1090122,
     "Médiane du revenu disponible par UC 2020": 21250,
@@ -3509,7 +3509,7 @@
   {
     "Code": 11170,
     "Libellé": "Gruissan",
-    "Population": "5 178",
+    "Population": 5178,
     "Densité de population 2020": 117.55,
     "Potentiel financier 2023": 11042258,
     "Médiane du revenu disponible par UC 2020": 20710,
@@ -3571,7 +3571,7 @@
   },
   {
     "Code": 11174,
-    "Libellé": "Les Ilhes",
+    "Libellé": "Ilhes",
     "Population": 59,
     "Densité de population 2020": 13.46,
     "Potentiel financier 2023": 34234,
@@ -3656,7 +3656,7 @@
   {
     "Code": 11178,
     "Libellé": "Labastide-d'Anjou",
-    "Population": "1 286",
+    "Population": 1286,
     "Densité de population 2020": 149.12,
     "Potentiel financier 2023": 914157,
     "Médiane du revenu disponible par UC 2020": 21150,
@@ -3865,8 +3865,8 @@
   },
   {
     "Code": 11188,
-    "Libellé": "La Palme",
-    "Population": "1 815",
+    "Libellé": "Palme",
+    "Population": 1815,
     "Densité de population 2020": 62.32,
     "Potentiel financier 2023": 1435322,
     "Médiane du revenu disponible par UC 2020": 21350,
@@ -3907,8 +3907,8 @@
   },
   {
     "Code": 11190,
-    "Libellé": "La Redorte",
-    "Population": "1 270",
+    "Libellé": "Redorte",
+    "Population": 1270,
     "Densité de population 2020": 92.14,
     "Potentiel financier 2023": 897806,
     "Médiane du revenu disponible par UC 2020": 18810,
@@ -4076,7 +4076,7 @@
   {
     "Code": 11198,
     "Libellé": "Laure-Minervois",
-    "Population": "1 014",
+    "Population": 1014,
     "Densité de population 2020": 25.82,
     "Potentiel financier 2023": 770329,
     "Médiane du revenu disponible par UC 2020": 19110,
@@ -4097,7 +4097,7 @@
   {
     "Code": 11199,
     "Libellé": "Lavalette",
-    "Population": "1 560",
+    "Population": 1560,
     "Densité de population 2020": 231.6,
     "Potentiel financier 2023": 779546,
     "Médiane du revenu disponible par UC 2020": 21580,
@@ -4160,7 +4160,7 @@
   {
     "Code": 11202,
     "Libellé": "Leucate",
-    "Population": "4 602",
+    "Population": 4602,
     "Densité de population 2020": 194.52,
     "Potentiel financier 2023": 13754022,
     "Médiane du revenu disponible par UC 2020": 20860,
@@ -4181,7 +4181,7 @@
   {
     "Code": 11203,
     "Libellé": "Lézignan-Corbières",
-    "Population": "11 167",
+    "Population": 11167,
     "Densité de population 2020": 294.9,
     "Potentiel financier 2023": 9490063,
     "Médiane du revenu disponible par UC 2020": 18860,
@@ -4244,7 +4244,7 @@
   {
     "Code": 11206,
     "Libellé": "Limoux",
-    "Population": "10 750",
+    "Population": 10750,
     "Densité de population 2020": 313.51,
     "Potentiel financier 2023": 9862250,
     "Médiane du revenu disponible par UC 2020": 19570,
@@ -4285,7 +4285,7 @@
   },
   {
     "Code": 11208,
-    "Libellé": "La Louvière-Lauragais",
+    "Libellé": "Louvière-Lauragais",
     "Population": 84,
     "Densité de population 2020": 12.96,
     "Potentiel financier 2023": 57194,
@@ -4328,7 +4328,7 @@
   {
     "Code": 11210,
     "Libellé": "Luc-sur-Orbieu",
-    "Population": "1 162",
+    "Population": 1162,
     "Densité de population 2020": 114.57,
     "Potentiel financier 2023": 746893,
     "Médiane du revenu disponible par UC 2020": 19840,
@@ -4475,7 +4475,7 @@
   {
     "Code": 11217,
     "Libellé": "Marcorignan",
-    "Population": "1 331",
+    "Population": 1331,
     "Densité de population 2020": 232.09,
     "Potentiel financier 2023": 784686,
     "Médiane du revenu disponible par UC 2020": 21120,
@@ -4558,7 +4558,7 @@
   },
   {
     "Code": 11221,
-    "Libellé": "Les Martys",
+    "Libellé": "Martys",
     "Population": 306,
     "Densité de population 2020": 15.75,
     "Potentiel financier 2023": 561874,
@@ -5231,7 +5231,7 @@
   {
     "Code": 11254,
     "Libellé": "Montréal",
-    "Population": "2 251",
+    "Population": 2251,
     "Densité de population 2020": 35.98,
     "Potentiel financier 2023": 1423619,
     "Médiane du revenu disponible par UC 2020": 19940,
@@ -5252,7 +5252,7 @@
   {
     "Code": 11255,
     "Libellé": "Montredon-des-Corbières",
-    "Population": "1 500",
+    "Population": 1500,
     "Densité de population 2020": 86.41,
     "Potentiel financier 2023": 1651836,
     "Médiane du revenu disponible par UC 2020": 21060,
@@ -5315,7 +5315,7 @@
   {
     "Code": 11258,
     "Libellé": "Moussan",
-    "Population": "2 113",
+    "Population": 2113,
     "Densité de population 2020": 137.16,
     "Potentiel financier 2023": 1152565,
     "Médiane du revenu disponible par UC 2020": 22070,
@@ -5336,7 +5336,7 @@
   {
     "Code": 11259,
     "Libellé": "Moussoulens",
-    "Population": "1 026",
+    "Population": 1026,
     "Densité de population 2020": 51.17,
     "Potentiel financier 2023": 578078,
     "Médiane du revenu disponible par UC 2020": 20850,
@@ -5399,7 +5399,7 @@
   {
     "Code": 11262,
     "Libellé": "Narbonne",
-    "Population": "57 571",
+    "Population": 57571,
     "Densité de population 2020": 324.49,
     "Potentiel financier 2023": 51976018,
     "Médiane du revenu disponible par UC 2020": 19270,
@@ -5441,7 +5441,7 @@
   {
     "Code": 11264,
     "Libellé": "Névian",
-    "Population": "1 309",
+    "Population": 1309,
     "Densité de population 2020": 89.61,
     "Potentiel financier 2023": 873797,
     "Médiane du revenu disponible par UC 2020": 21910,
@@ -5483,7 +5483,7 @@
   {
     "Code": 11266,
     "Libellé": "Port-la-Nouvelle",
-    "Population": "5 973",
+    "Population": 5973,
     "Densité de population 2020": 206.83,
     "Potentiel financier 2023": 11657531,
     "Médiane du revenu disponible par UC 2020": 19270,
@@ -5504,7 +5504,7 @@
   {
     "Code": 11267,
     "Libellé": "Ornaisons",
-    "Population": "1 128",
+    "Population": 1128,
     "Densité de population 2020": 103.06,
     "Potentiel financier 2023": 796633,
     "Médiane du revenu disponible par UC 2020": 20720,
@@ -5546,7 +5546,7 @@
   {
     "Code": 11269,
     "Libellé": "Ouveillan",
-    "Population": "2 602",
+    "Population": 2602,
     "Densité de population 2020": 85.19,
     "Potentiel financier 2023": 1632093,
     "Médiane du revenu disponible par UC 2020": 20130,
@@ -5609,7 +5609,7 @@
   {
     "Code": 11272,
     "Libellé": "Palaja",
-    "Population": "2 670",
+    "Population": 2670,
     "Densité de population 2020": 169.91,
     "Potentiel financier 2023": 2025707,
     "Médiane du revenu disponible par UC 2020": 24240,
@@ -5756,7 +5756,7 @@
   {
     "Code": 11279,
     "Libellé": "Pennautier",
-    "Population": "2 848",
+    "Population": 2848,
     "Densité de population 2020": 152.64,
     "Potentiel financier 2023": 2007194,
     "Médiane du revenu disponible par UC 2020": 21470,
@@ -5777,7 +5777,7 @@
   {
     "Code": 11280,
     "Libellé": "Pépieux",
-    "Population": "1 128",
+    "Population": 1128,
     "Densité de population 2020": 110.36,
     "Potentiel financier 2023": 750094,
     "Médiane du revenu disponible par UC 2020": 18620,
@@ -5798,7 +5798,7 @@
   {
     "Code": 11281,
     "Libellé": "Pexiora",
-    "Population": "1 285",
+    "Population": 1285,
     "Densité de population 2020": 94.3,
     "Potentiel financier 2023": 706219,
     "Médiane du revenu disponible par UC 2020": 19540,
@@ -5882,7 +5882,7 @@
   {
     "Code": 11285,
     "Libellé": "Peyriac-de-Mer",
-    "Population": "1 188",
+    "Population": 1188,
     "Densité de population 2020": 42.46,
     "Potentiel financier 2023": 883656,
     "Médiane du revenu disponible par UC 2020": 21520,
@@ -5903,7 +5903,7 @@
   {
     "Code": 11286,
     "Libellé": "Peyriac-Minervois",
-    "Population": "1 177",
+    "Population": 1177,
     "Densité de population 2020": 115.51,
     "Potentiel financier 2023": 829981,
     "Médiane du revenu disponible par UC 2020": 19350,
@@ -5945,7 +5945,7 @@
   {
     "Code": 11288,
     "Libellé": "Pezens",
-    "Population": "1 749",
+    "Population": 1749,
     "Densité de population 2020": 142.57,
     "Potentiel financier 2023": 1038193,
     "Médiane du revenu disponible par UC 2020": 20490,
@@ -6028,7 +6028,7 @@
   },
   {
     "Code": 11292,
-    "Libellé": "La Pomarède",
+    "Libellé": "Pomarède",
     "Population": 180,
     "Densité de population 2020": 13.53,
     "Potentiel financier 2023": 127390,
@@ -6092,7 +6092,7 @@
   {
     "Code": 11295,
     "Libellé": "Portel-des-Corbières",
-    "Population": "1 326",
+    "Population": 1326,
     "Densité de population 2020": 37.66,
     "Potentiel financier 2023": 1115145,
     "Médiane du revenu disponible par UC 2020": 20360,
@@ -6197,7 +6197,7 @@
   {
     "Code": 11301,
     "Libellé": "Puichéric",
-    "Population": "1 206",
+    "Population": 1206,
     "Densité de population 2020": 89.78,
     "Potentiel financier 2023": 829581,
     "Médiane du revenu disponible par UC 2020": 17570,
@@ -6260,7 +6260,7 @@
   {
     "Code": 11304,
     "Libellé": "Quillan",
-    "Population": "3 159",
+    "Population": 3159,
     "Densité de population 2020": 90.7,
     "Potentiel financier 2023": 3441984,
     "Médiane du revenu disponible par UC 2020": 18280,
@@ -6491,7 +6491,7 @@
   {
     "Code": 11315,
     "Libellé": "Rieux-Minervois",
-    "Population": "1 997",
+    "Population": 1997,
     "Densité de population 2020": 91.41,
     "Potentiel financier 2023": 1616555,
     "Médiane du revenu disponible par UC 2020": 19370,
@@ -6638,7 +6638,7 @@
   {
     "Code": 11322,
     "Libellé": "Roquefort-des-Corbières",
-    "Population": "1 040",
+    "Population": 1040,
     "Densité de population 2020": 22.12,
     "Potentiel financier 2023": 1003536,
     "Médiane du revenu disponible par UC 2020": 20680,
@@ -6658,7 +6658,7 @@
   },
   {
     "Code": 11323,
-    "Libellé": "Roquetaillade-et-Conilhac",
+    "Libellé": "Roquetaillade",
     "Population": 274,
     "Densité de population 2020": 17.28,
     "Potentiel financier 2023": 450093,
@@ -6827,7 +6827,7 @@
   {
     "Code": 11332,
     "Libellé": "Saint-André-de-Roquelongue",
-    "Population": "1 401",
+    "Population": 1401,
     "Densité de population 2020": 44.69,
     "Potentiel financier 2023": 957349,
     "Médiane du revenu disponible par UC 2020": 20750,
@@ -7247,7 +7247,7 @@
   {
     "Code": 11353,
     "Libellé": "Saint-Marcel-sur-Aude",
-    "Population": "2 073",
+    "Population": 2073,
     "Densité de population 2020": 242.29,
     "Potentiel financier 2023": 1479376,
     "Médiane du revenu disponible par UC 2020": 20670,
@@ -7310,7 +7310,7 @@
   {
     "Code": 11356,
     "Libellé": "Saint-Martin-Lalande",
-    "Population": "1 137",
+    "Population": 1137,
     "Densité de population 2020": 88.3,
     "Potentiel financier 2023": 1033714,
     "Médiane du revenu disponible par UC 2020": 22630,
@@ -7394,7 +7394,7 @@
   {
     "Code": 11360,
     "Libellé": "Saint-Nazaire-d'Aude",
-    "Population": "2 128",
+    "Population": 2128,
     "Densité de population 2020": 240.56,
     "Potentiel financier 2023": 1458826,
     "Médiane du revenu disponible par UC 2020": 21230,
@@ -7583,7 +7583,7 @@
   {
     "Code": 11369,
     "Libellé": "Sallèles-d'Aude",
-    "Population": "3 107",
+    "Population": 3107,
     "Densité de population 2020": 242.15,
     "Potentiel financier 2023": 2680009,
     "Médiane du revenu disponible par UC 2020": 21290,
@@ -7604,7 +7604,7 @@
   {
     "Code": 11370,
     "Libellé": "Salles-d'Aude",
-    "Population": "3 327",
+    "Population": 3327,
     "Densité de population 2020": 179.12,
     "Potentiel financier 2023": 2161333,
     "Médiane du revenu disponible par UC 2020": 21960,
@@ -7729,7 +7729,7 @@
   },
   {
     "Code": 11376,
-    "Libellé": "La Serpent",
+    "Libellé": "Serpent",
     "Population": 98,
     "Densité de population 2020": 9.91,
     "Potentiel financier 2023": 64588,
@@ -7793,7 +7793,7 @@
   {
     "Code": 11379,
     "Libellé": "Sigean",
-    "Population": "5 687",
+    "Population": 5687,
     "Densité de population 2020": 156.78,
     "Potentiel financier 2023": 4737140,
     "Médiane du revenu disponible par UC 2020": 20340,
@@ -8044,7 +8044,7 @@
   },
   {
     "Code": 11391,
-    "Libellé": "La Tourette-Cabardès",
+    "Libellé": "Tourette-Cabardès",
     "Population": 25,
     "Densité de population 2020": 4.77,
     "Potentiel financier 2023": 16440,
@@ -8171,7 +8171,7 @@
   {
     "Code": 11397,
     "Libellé": "Trèbes",
-    "Population": "5 538",
+    "Population": 5538,
     "Densité de population 2020": 332.4,
     "Potentiel financier 2023": 5951078,
     "Médiane du revenu disponible par UC 2020": 18930,
@@ -8591,7 +8591,7 @@
   {
     "Code": 11418,
     "Libellé": "Villasavary",
-    "Population": "1 251",
+    "Population": 1251,
     "Densité de population 2020": 36.64,
     "Potentiel financier 2023": 836790,
     "Médiane du revenu disponible par UC 2020": 20630,
@@ -8738,7 +8738,7 @@
   {
     "Code": 11425,
     "Libellé": "Villegailhenc",
-    "Population": "1 722",
+    "Population": 1722,
     "Densité de population 2020": 346.86,
     "Potentiel financier 2023": 1107730,
     "Médiane du revenu disponible par UC 2020": 20580,
@@ -8759,7 +8759,7 @@
   {
     "Code": 11426,
     "Libellé": "Villegly",
-    "Population": "1 232",
+    "Population": 1232,
     "Densité de population 2020": 121.67,
     "Potentiel financier 2023": 703015,
     "Médiane du revenu disponible par UC 2020": 20790,
@@ -8822,7 +8822,7 @@
   {
     "Code": 11429,
     "Libellé": "Villemoustaussou",
-    "Population": "4 558",
+    "Population": 4558,
     "Densité de population 2020": 376.97,
     "Potentiel financier 2023": 3499754,
     "Médiane du revenu disponible par UC 2020": 23260,
@@ -8843,7 +8843,7 @@
   {
     "Code": 11430,
     "Libellé": "Villeneuve-la-Comptal",
-    "Population": "1 434",
+    "Population": 1434,
     "Densité de population 2020": 91.39,
     "Potentiel financier 2023": 915743,
     "Médiane du revenu disponible par UC 2020": 22330,
@@ -8927,7 +8927,7 @@
   {
     "Code": 11434,
     "Libellé": "Villepinte",
-    "Population": "1 284",
+    "Population": 1284,
     "Densité de population 2020": 81.82,
     "Potentiel financier 2023": 836281,
     "Médiane du revenu disponible par UC 2020": 20070,
@@ -9074,7 +9074,7 @@
   {
     "Code": 11441,
     "Libellé": "Vinassan",
-    "Population": "2 724",
+    "Population": 2724,
     "Densité de population 2020": 297.1,
     "Potentiel financier 2023": 1707181,
     "Médiane du revenu disponible par UC 2020": 23020,

@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     function style(feature) {
         return {
-            fillColor: getDensityColor(feature.properties["Densité de population 2020"]),
+            fillColor: getDensityColor(feature.properties["Population"]),
             weight: 2,
             opacity: 1,
             color: 'white',
@@ -61,6 +61,16 @@ document.addEventListener("DOMContentLoaded", function() {
         layer.on({
             mouseover: highlightFeature,
             mouseout: resetHighlight,
+            click: function() {
+                // Mise à jour pour appeler updateRadarChart avec le nom de la commune sélectionnée
+                if (window.updateRadarChart) {
+                    window.updateRadarChart(feature.properties.nom); // Assurez-vous que `nom` correspond à la clé de vos données
+                }
+                // Mise à jour pour maintenir la cohérence de la mise en évidence
+                if (window.highlightPointOnGraph) {
+                    window.highlightPointOnGraph(feature.properties.nom);
+                }
+            }
         });
     }
 
@@ -74,16 +84,45 @@ document.addEventListener("DOMContentLoaded", function() {
                 });
                 if (geoFeature) {
                     geoFeature.properties["Population"] = item["Population"];
-                    geoFeature.properties["Densité de population 2020"] = item["Densité de population 2020"];
+                    geoFeature.properties["Population"] = item["Population"];
                 }
             });
 
             geojsonLayer = L.geoJson(geoJsonData, {
                 style: style,
-                onEachFeature: onEachFeature,
+                onEachFeature: function(feature, layer) {
+                    layer.on({
+                        mouseover: highlightFeature,
+                        mouseout: resetHighlight,
+                        click: function() {
+                            // Appel de la fonction de mise en évidence dans visualisation1.js
+                            if (window.highlightPointOnGraph) {
+                                window.highlightPointOnGraph(feature.properties.nom);
+                            }
+                        }
+                    });
+                },
             }).addTo(map);
         });
     });
+
+     window.selectCommuneOnMap = function(communeName) {
+        geojsonLayer.eachLayer(function(layer) {
+            resetHighlight({target: layer});
+        });
+        
+        geojsonLayer.eachLayer(function(layer) {
+            if (layer.feature.properties.nom === communeName) {
+                highlightFeature({target: layer});
+                // Appel de updateRadarChart lors de la sélection via le graphique
+                if(window.updateRadarChart) {
+                    window.updateRadarChart(communeName);
+                }
+                //map.fitBounds(layer.getBounds()); // Optionnel: Centrer la carte sur la commune sélectionnée
+            }
+        });
+    };
+
 
     var legend = L.control({ position: "bottomright" });
 

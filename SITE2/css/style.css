@@ -6,7 +6,7 @@ header {
     left: 0;
     width: 100%;
     box-shadow: 0 10px 10px rgba(0, 0, 0, 0.6);
-    padding: 0 20px;
+    padding: 0 ;
     border-bottom: 8px solid #ccc;
     border-image: linear-gradient(to right, 
         #e97804 0%, #e97804 20%, 
@@ -32,8 +32,8 @@ nav ul {
 }
 
 nav li {
-    margin-right: 40px;
-    margin-left: 10px;
+    margin-right: 10px;
+    margin-left: 60px;
 }
 
 nav a {
@@ -41,14 +41,16 @@ nav a {
     color: #000;
     font-family: 'Avenir', sans-serif;
     font-weight: bold;
-    padding: 8px 80px;
+    padding: 8px 38px;
     border-radius: 10px;
     border: 1px solid;
     border-color: #00000000;
+    font-size: 14px;
 }
 
 nav ul li:first-child a img {
-    max-width: 400px;
+    height: 80px;
+    width: 80px;
     height: auto;
     display: flex;
     align-items: left;
@@ -113,8 +115,22 @@ nav ul li:nth-child(5) a.active {
     transform: scale(1.1);
 }
 
+nav ul li:nth-child(6) a {
+    background-color: #fff;
+}
 
-nav ul li:nth-child(6) a img {
+nav ul li:nth-child(6) a:hover {
+    background-color: #d14816;
+    color: #000;
+}
+nav ul li:nth-child(6) a.active {
+    background-color: #d14816;
+    color: #fff;
+    transform: scale(1.1);
+}
+
+
+nav ul li:nth-child(7) a img {
     height: 60px;
     width: 60px;
     border-radius: 30%;
@@ -128,7 +144,7 @@ nav ul li:nth-child(6) a img {
 /* Body */
 
 body { font: 12px Arial;
-    margin-bottom: 1000px;}
+    margin-bottom: 0;}
 
 
 
@@ -176,7 +192,7 @@ body { font: 12px Arial;
 main{
     margin-top: 180px;
     margin-left: 250px;
-    margin-right: 200px;
+    margin-right: 250px;
 }
 
 h1 {
@@ -261,13 +277,68 @@ h1 {
 }
 
 .textbox {
+    font-family: 'Avenir', sans-serif;
     padding: 20px;
+    font-size: 15px;
 }
 
 .textbox p {
     font-size: 20px;
     font-weight: bold;
 }
+
+
+
+/* Quatres parties de à propos */
+.indicator-section {
+    display: grid;
+    grid-template-areas:
+        'top-left top-right'
+        'bottom-left bottom-right';
+    grid-gap: 20px;
+}
+
+.indicator-box {
+    width: 100%;
+    text-align: left;
+}
+
+.indicator-box h2 {
+    text-align: center;
+    margin-top: 0;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.indicator-box img {
+    max-width: 30%;
+    height: auto;
+    float: left;
+}
+
+.indicator-box ul {
+    margin-left: 0; /* Réinitialisez la marge par défaut de la liste */
+    padding-left: 10px; /* Ajoutez un peu d'espace à gauche de la liste */
+}
+
+/* Définir la disposition spécifique des boîtes dans la grille */
+.indicator-box:nth-child(1) {
+    grid-area: top-left;
+}
+
+.indicator-box:nth-child(2) {
+    grid-area: top-right;
+}
+
+.indicator-box:nth-child(3) {
+    grid-area: bottom-left;
+}
+
+.indicator-box:nth-child(4) {
+    grid-area: bottom-right;
+}
+
+
 
 
 
@@ -283,7 +354,7 @@ h1 {
 
 .viz-container {
     flex: 1;
-}
+}   
 
 #chart-container, #map-container {
     flex: 1;
@@ -373,4 +444,21 @@ select {
     fill: none; /* Pas de remplissage */
     stroke: darkblue; /* Couleur des contours */
     stroke-width: 2px; /* Épaisseur des contours */
+}
+
+
+/* Foot */
+
+.foot {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    z-index: 3 ;
+}
+
+.foot img {
+    width: 100%;
+    height: auto;
 }

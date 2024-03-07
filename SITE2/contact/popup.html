@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Avenir', sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+        
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        
+        .contact-item {
+            margin: 15px 0;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 15px;
+            display: flex;
+            flex-direction: column; /* Affiche les items verticalement */
+            align-items: center;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        /* Ajout de marges inférieures entre les éléments */
+        .contact-item + .contact-item {
+            margin-top: 20px;
+        }
+        
+        .contact-item:hover {
+            transform: scale(1.05);
+        }
+        
+        .contact-item i {
+            margin-bottom: 10px; /* Espace entre l'icône et le texte */
+            color: #007bff;
+        }
+        
+        a {
+            color: #333;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        
+        a:hover {
+            color: #007bff;
+        }
+    </style>
+</head>
+<body>
+    <h1>Contactez-nous</h1>
+    <div class="contact-item">
+        <i class="fas fa-globe"></i>
+        <a href="https://www.aude.fr" target="_blank">Site Internet</a>
+    </div>
+    <div class="contact-item">
+        <i class="fas fa-phone"></i>
+        <a href="tel:+1234567890">04 68 11 68 11</a>
+    </div>
+    <div class="contact-item">
+        <i class="fas fa-map-marker-alt"></i>
+        <a href="https://www.google.fr/maps/place/D%C3%A9partement+de+l'Aude+-+H%C3%B4tel+du+D%C3%A9partement/@43.230788,2.3499471,17z/data=!3m1!4b1!4m6!3m5!1s0x12ae2e9cc97306f5:0xbf02d5642c2efe74!8m2!3d43.230788!4d2.352522!16s%2Fg%2F1hc54pxdf?entry=ttu" target="_blank">Conseil départemental de l'Aude</a>
+    </div>
+    <div class="contact-item">
+        <i class="fab fa-facebook"></i>
+        <a href="https://www.facebook.com/departementdelaude/?locale=fr_FR" target="_blank">Facebook</a>
+    </div>
+</body>
+</html>
