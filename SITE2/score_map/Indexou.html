@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculateur de Score des Villes</title>
+    <link rel="stylesheet" href="styleindicataeur.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"/>
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+</head>
+<body>
+    <div id="dashboard" style="display: flex; justify-content: space-between;">
+        <div id="sliders" style="width: 30%;"></div>
+        <div id="carte" style="height: 400px; width: 68%;"></div>
+    </div>
+    <div id="statistiques" style="display: flex; justify-content: space-between; margin-top: 20px;">
+        <div>
+            <h3>Statistiques des Scores</h3>
+            <p id="maxScore">Score Max: </p>
+            <p id="minScore">Score Min: </p>
+            <p id="medianScore">Score Médian: </p>
+            <p id="firstQuartile">Premier Quartile: </p>
+            <p id="thirdQuartile">Troisième Quartile: </p>
+        </div>
+        <div id="classement-container" style="overflow-y: auto; height: 150px; width: 68%;">
+            <table id="classement">
+                <thead>
+                    <tr>
+                        <th>Nom de la Ville</th>
+                        <th>Score</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+    </div>
+    <script src="script.js"></script>
+    <script src="carte21.js"></script>
+</body>
+</html>
