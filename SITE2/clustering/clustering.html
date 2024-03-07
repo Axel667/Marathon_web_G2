@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Soli'Aude</title>
+        <link rel="stylesheet" href="../css/style.css">
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"/>
+        <link rel="icon" href="../CNO/favicone.svg" type="image/svg">
+        <script src="https://d3js.org/d3.v7.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    </head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="../presentation.html"><img src="../CNO/LOGO.svg" alt="Logo Soli'Aude" id="logo"></a></li>
+                <li><a href="../propos/propos.html">À propos</a></li>
+                <li><a href="../graphique/graphique.html">Graphiques</a></li>
+                <li><a href="../score_map/Indexou.html">Scoring Map</a></li>
+                <li><a href="../clustering/clustering.html" class="active">Clustering</a></li>              
+                <li><a href="../contact/popup.html" target="_blank" onclick="window.open('../contact/popup.html', 'newwindow', 'width=400,height=600'); return false;">Contact</a></li>
+                <li><a href="https://www.aude.fr/" target="_blank"><img src="../CNO/logoaude.png" alt="Logo"></a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="cluster">
+        <label for="x-axis">Axe X :</label>
+        <select id="x-axis"></select>
+        <br>
+
+        <label for="y-axis">Axe Y :</label>
+        <select id="y-axis"></select>
+        <br>
+
+        <div id="chart"></div>
+
+        <script src="cluster.js"></script>
+    </div>
+
+</body>
+<footer>
+    <img src="../CNO/Footer.svg" alt="Bas de la page">
+</footer>
+</html>

@@ -583,6 +583,34 @@ input[type=range] {
 
 
 
+
+/* Clustering */
+#chart {
+    margin-left: 100px; /* Center the chart horizontally */
+    margin-top: 40px;
+    width: 100%; /* Adjust the width as needed */
+    height: 500px; /* Maintain the desired height */
+}
+
+select {
+    margin: 5px;
+}
+
+.axis line,
+.axis path {
+    stroke: black;
+}
+
+.axis text {
+    font-size: 12px;
+}
+
+.cluster{
+    margin-top: 40px;
+}
+
+
+
 /* Foot */
 
 footer {
