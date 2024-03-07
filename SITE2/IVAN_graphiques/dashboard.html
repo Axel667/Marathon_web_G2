@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tableau de Bord de Visualisation</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+    />
+    <!-- Ajout des sélecteurs pour les axes X et Y 
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>-->
+
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script>
+      var d3v7 = d3
+      // This ensures that the global d3 namespace is now free to be overwritten by the next D3 version
+    </script>
+    <script src="https://d3js.org/d3.v3.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  </head>
+  <body>
+    <div class="dashboard">
+      <div
+        id="chart-container"
+        class="viz-container"
+        style="width: 50%; float: left"
+      >
+        <!-- Ajout des sélecteurs pour les axes X et Y -->
+        <label for="x-axis-select">Axe X:</label>
+        <select id="x-axis-select"></select>
+        <label for="y-axis-select">Axe Y:</label>
+        <select id="y-axis-select"></select>
+        <div id="chart"></div>
+      </div>
+      <div
+        id="map-container"
+        class="viz-container"
+        style="width: 50%; float: right"
+      >
+        <div id="divmap"></div>
+      </div>
+    </div>
+
+    <!-- Déplacer les scripts à la fin pour s'assurer que le DOM est chargé -->
+    <div class="radarChart"></div>
+
+    <!-- The slider switch for toggling the median radar chart -->
+    <label class="switch">
+      <input type="checkbox" id="toggleMedianRadar" />
+      <span class="slider round"></span>
+    </label>
+    <span>Afficher la médiane</span>
+    <!-- Tooltip div -->
+
+    <div
+      id="radarTooltip"
+      style="
+        position: absolute;
+        opacity: 0;
+        pointer-events: none;
+        background-color: #fff;
+        padding: 10px;
+        border-radius: 5px;
+        border: 1px solid #000;
+      "
+    ></div>
+
+    <script>
+      /* Radar chart design created by Nadieh Bremer - VisualCinnamon.com */
+      var margin = { top: 100, right: 100, bottom: 100, left: 100 },
+        width =
+          Math.min(700, window.innerWidth - 10) - margin.left - margin.right,
+        height = Math.min(
+          width,
+          window.innerHeight - margin.top - margin.bottom - 20
+        )
+
+      var color = d3.scale.ordinal().range(["#EDC951", "#636061", "#00A0B0"])
+
+      var radarChartOptions = {
+        w: width,
+        h: height,
+        margin: margin,
+        maxValue: 0.5,
+        levels: 5,
+        roundStrokes: true,
+        color: color,
+      }
+
+      document
+        .getElementById("toggleMedianRadar")
+        .addEventListener("change", function () {
+          toggleMedianRadarChart() // Ensure this function is correctly defined in radarChart.js
+        })
+    </script>
+
+    <script src="radarChart.js"></script>
+    <!-- Déplacer les scripts à la fin pour s'assurer que le DOM est chargé -->
+    <script src="visualisation1.js"></script>
+    <script src="carte2.js"></script>
+  </body>
+</html>
