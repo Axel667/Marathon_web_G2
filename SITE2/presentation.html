@@ -18,37 +18,19 @@
         </div>
         <nav>
             <ul>
-                <li><a href="presentation.html">À propos</a></li>
-                <li><a href="#Graphiques">Graphiques</a></li>
+                <li><a href="#Presentation">Présentation</a></li>
+                <li><a href="dashboard.html">Graphiques </a></li>
                 <li><a href="#Indicateur">Indicateur</a></li>
                 <li><a href="#Utilisation">Utilisation</a></li>
             </ul>
         </nav>
     </header>
- 
-    <div class="dashboard">
-        <div id="chart-container" class="viz-container" style="width: 50%; float: left;">
-            <!-- Ajout des sélecteurs pour les axes X et Y -->
-            <label for="x-axis-select">Axe X:</label>
-            <select id="x-axis-select"></select>
-            <label for="y-axis-select">Axe Y:</label>
-            <select id="y-axis-select"></select>
-            <div id="chart"></div>
-        </div>
-        <div id="map-container" class="viz-container" style="width: 50%; float: right;">
-            <div id="divmap"></div>
-        </div>
-    </div>
-    <!-- Déplacer les scripts à la fin pour s'assurer que le DOM est chargé -->
-    <script src="visualisation1.js"></script>
-    <script src="carte2.js"></script>
+
+    <video autoplay muted loop id="myVideo">
+        <source src="../CNO/Teaser.mp4" type="video/mp4">
+        <!-- Affichez ce texte si la vidéo ne peut pas être chargée -->
+        Votre navigateur ne supporte pas la vidéo.
+    </video>
+
 </body>
 </html>
-
-
-
-
-
-
-
-

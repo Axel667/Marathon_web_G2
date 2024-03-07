@@ -4,8 +4,7 @@ header {
     left: 0;
     width: 100%;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    z-index: 1000;
-    padding: 10px;
+    padding: 0 20px;
     border-bottom: 8px solid #ccc;
     border-image: linear-gradient(to right, 
         #e97804 0%, #e97804 20%, 
@@ -16,8 +15,10 @@ header {
         #fcf5ef 73.4%, #fcf5ef 80%,
         #2984ce 80%, #2984ce 100%);
     border-image-slice: 1;
-    background-color:antiquewhite;
-}
+    background-image: url('../CNO/Barre_de_naviguation.svg');
+    background-position: center;
+    background-size: 140%;
+    }
 
 #logo-container {
     display: flex;
@@ -41,20 +42,68 @@ header {
 nav ul {
     list-style: none;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
 }
 
-nav ul li {
-    padding: 0 20px;
+nav li {
+    margin-right: 10px;
+    margin-left: 10px;
+
 }
 
-nav ul li a {
+nav a {
     text-decoration: none;
-    color: #333;
+    color: #000;
+    font-family : 'Avenir', sans-serif;
     font-weight: bold;
+    padding: 8px 100px;
+    border-radius: 5px;
+    border: 1px solid;
 }
+
+nav ul li:first-child a {
+    background-color: #e97804;
+}
+nav ul li:first-child a:hover {
+    background-color: #fff; /* Couleur de fond au survol pour tous les boutons */
+    color: #000; /* Couleur du texte au survol pour tous les boutons */
+}
+
+nav ul li:nth-child(2) a {
+    background-color: #fab613;
+}
+nav ul li:nth-child(2) a:hover {
+    background-color: #fff; /* Couleur de fond au survol pour tous les boutons */
+    color: #000; /* Couleur du texte au survol pour tous les boutons */
+}
+
+nav ul li:nth-child(3) a {
+    background-color: #8ecae6;
+}
+nav ul li:nth-child(3) a:hover {
+    background-color: #fff; /* Couleur de fond au survol pour tous les boutons */
+    color: #000; /* Couleur du texte au survol pour tous les boutons */
+}
+
+nav ul li:nth-child(4) a {
+    background-color: #2984ce;
+}
+nav ul li:nth-child(4) a:hover {
+    background-color: #fff; /* Couleur de fond au survol pour tous les boutons */
+    color: #000; /* Couleur du texte au survol pour tous les boutons */
+}
+
+
 
 body { font: 12px Arial; }
+
+#myVideo {
+    position: relative; /* Change from fixed to relative */
+    left: 50%; /* Position at the middle of the page */
+    transform: translate(-50%, 35%); /* Center the video */
+    width: 500%; /* Width of the video */
+    height: 500px; /* Height of the video */
+}
 
 .dashboard {
     display: flex;
