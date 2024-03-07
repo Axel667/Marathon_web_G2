@@ -1,12 +1,12 @@
-/* Haut du site */
+/* Styles de base */
 header {
-    position: fixed;
-    z-index: 2;
+    position: relative;
+    z-index: 10;
     top: 0;
     left: 0;
     width: 100%;
     box-shadow: 0 10px 10px rgba(0, 0, 0, 0.6);
-    padding: 0 ;
+    padding: 0;
     border-bottom: 8px solid #ccc;
     border-image: linear-gradient(to right, 
         #e97804 0%, #e97804 20%, 
@@ -19,21 +19,21 @@ header {
     border-image-slice: 1;
     background-image: url('../CNO/Barre_de_naviguation.svg');
     background-position: center;
-    background-size: 140%;
+    background-size: 200%; /* Modifier pour "cover" pour une meilleure adaptabilité */
 }
 
-
-
-/* Boutons naviguation */
+/* Boutons navigation */
 nav ul {
     list-style: none;
     display: flex;
+    flex-wrap: wrap; /* Permet aux éléments de passer à la ligne sur les petits écrans */
+    justify-content: center; /* Centrer les éléments pour les petits écrans */
     align-items: center;
+    padding: 0; /* Enlever le padding par défaut */
 }
 
 nav li {
-    margin-right: 10px;
-    margin-left: 60px;
+    margin: 5px 10px; /* Réduire l'espacement pour les petits écrans */
 }
 
 nav a {
@@ -41,11 +41,44 @@ nav a {
     color: #000;
     font-family: 'Avenir', sans-serif;
     font-weight: bold;
-    padding: 8px 38px;
+    padding: 8px 20px; /* Ajuster le padding pour les petits écrans */
     border-radius: 10px;
-    border: 1px solid;
-    border-color: #00000000;
+    border: 1px solid transparent; /* Simplifier */
     font-size: 14px;
+    transition: background-color 0.3s, color 0.3s, transform 0.3s; /* Ajouter une transition */
+}
+
+/* Media queries pour l'adaptabilité */
+@media (max-width: 768px) {
+    /* Pour les tablettes et en dessous */
+    nav ul {
+        flex-direction: column; /* Les éléments de navigation en colonne */
+    }
+
+    nav a {
+        font-size: 12px; /* Taille de police plus petite */
+        padding: 8px 16px; /* Padding réduit */
+    }
+
+    nav ul li:first-child a img {
+        height: 60px; /* Réduire la taille du logo */
+    }
+}
+
+@media (max-width: 480px) {
+    /* Pour les mobiles */
+    header {
+        border-bottom: 5px solid #ccc; /* Bordure inférieure plus fine */
+    }
+
+    nav li {
+        margin: 5px 5px; /* Espacement réduit */
+    }
+
+    nav a {
+        font-size: 11px; /* Taille de police encore plus petite */
+        padding: 6px 12px; /* Padding encore réduit */
+    }
 }
 
 nav ul li:first-child a img {
@@ -158,33 +191,11 @@ body {
 #myVideo {
     position: relative; /* Change from fixed to relative */
     left: 50%; /* Position at the middle of the page */
-    transform: translate(-50%, 35%); /* Center the video */
+    transform: translate(-50%, 10%); /* Center the video */
     width: 100%; /* Width of the video */
     height: 500px; /* Height of the video */
 }
 
-
-
-
-
-/* Calculateur */
-#calculateur {
-    margin-top: 180px; /* Ajustez la marge en haut selon la hauteur du header */
-    margin-right: 800px;;
-    padding: 0px;
-    background-color: #f4f4f4; /* Couleur de fond pour le div calculateur */
-}
-
-#score2 {
-    /* Add your desired styling for the score container */
-    background-color: #f0f0f0;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    margin-top: 10px;
-    width: 100px; /* Adjust the width as needed */
-    text-align: center;
-}
 
 
 
@@ -194,7 +205,7 @@ body {
 /* A propos  */
 
 main{
-    margin-top: 180px;
+    margin-top: 50px;
     margin-left: 250px;
     margin-right: 250px;
 }
@@ -347,13 +358,10 @@ h1 {
 
 
 
-
-
 /* Graphiques : */
 .dashboard {
     display: flex;
     justify-content: space-between;
-    margin-top: 180px
 }
 
 .viz-container {
@@ -364,7 +372,7 @@ h1 {
     flex: 1;
     min-width: 45%; /* Ajustez cette valeur selon vos besoins */
     height: 500px; /* Hauteur fixe pour simplifier */
-    padding: 10px;
+    padding: 100px;
 }
 
 #chart {
@@ -451,10 +459,127 @@ select {
 }
 
 
+
+
+
+/* Score map */
+
+.scoremap {
+    margin-top: 20px;
+    padding: 50px;
+}
+
+
+#calculateur {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 20px;
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px solid;
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+/* Couleurs spécifiques pour chaque cadre */
+.column:nth-child(1) { border-color: #ff0000; } /* Rouge */
+.column:nth-child(2) { border-color: #00ff00; } /* Vert */
+.column:nth-child(3) { border-color: #0000ff; } /* Bleu */
+.column:nth-child(4) { border-color: #ff00ff; } /* Fuchsia */
+.column:nth-child(5) { border-color: #00ffff; } /* Aqua */
+.column:nth-child(6) { border-color: #ffff00; } /* Jaune */
+.column:nth-child(7) { border-color: #ff7f50; } /* Corail */
+.column:nth-child(8) { border-color: #6a5acd; } /* Bleu ardoise */
+.column:nth-child(9) { border-color: #ff4500; } /* Orange rouge */
+.column:nth-child(10) { border-color: #2e8b57; } /* Vert de mer */
+.column:nth-child(11) { border-color: #da70d6; } /* Orchidée */
+.column:nth-child(12) { border-color: #db7093; } /* Rose pâle */
+.column:nth-child(13) { border-color: #4682b4; } /* Bleu acier */
+.column:nth-child(14) { border-color: #d2691e; } /* Chocolat */
+.column:nth-child(15) { border-color: #b0c4de; } /* Bleu clair */
+.column:nth-child(16) { border-color: #808080; } /* Gris */
+
+#score {
+    font-weight: bold; /* Gras */
+    font-size: 1.2em; /* Taille de police plus grande */
+    color: red; /* Couleur rouge */
+    align-self: center;
+}
+
+
+input[type=range] {
+    width: 100%; /* Ajustez la largeur si nécessaire */
+    margin: 10px 0;
+}
+#classement-container {
+    max-height: 400px; /* Hauteur maximale avant le défilement */
+    overflow-y: auto; /* Permet le défilement vertical */
+    margin-top: 20px; /* Espace au-dessus de la liste */
+}
+
+#statistiques {
+    display: flex;
+    justify-content: space-around; /* Répartit l'espace entre les éléments */
+    margin-top: 20px; /* Espace au-dessus des statistiques */
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+#dashboard {
+    display: flex;
+    justify-content: space-between;
+}
+
+#controls-container {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+}
+
+#sliders {
+    height: 400px;
+    overflow-y: auto;
+    border: 1px solid #ddd;
+    margin-bottom: 20px;
+    padding: 10px;
+}
+
+#statistiques {
+    border: 1px solid #ddd;
+    padding: 10px;
+}
+
+#carte {
+    z-index: 1;
+    height: 400px;
+    width: 68%;
+    border: 1px solid #ddd;
+}
+
+#classement-container {
+    overflow-y: auto;
+    height: 150px;
+    border: 1px solid #ddd;
+    width: 68%;
+}
+
+
+
 /* Foot */
 
 footer {
     width: 100%;
     text-align: center;
-    margin-top: calc(30vh);
+    margin-top: calc(35vh);
 }

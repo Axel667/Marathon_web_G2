@@ -3,39 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <title>Calculateur de Score des Villes</title>
-    <link rel="stylesheet" href="styleindicataeur.css">
+    <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"/>
     <script src="https://d3js.org/d3.v6.min.js"></script>
+    <link rel="icon" href="../CNO/favicone.svg" type="image/svg">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
 </head>
 <body>
-    <div id="dashboard" style="display: flex; justify-content: space-between;">
-        <div id="sliders" style="width: 30%;"></div>
-        <div id="carte" style="height: 400px; width: 68%;"></div>
-    </div>
-    <div id="statistiques" style="display: flex; justify-content: space-between; margin-top: 20px;">
-        <div>
-            <h3>Statistiques des Scores</h3>
-            <p id="maxScore">Score Max: </p>
-            <p id="minScore">Score Min: </p>
-            <p id="medianScore">Score Médian: </p>
-            <p id="firstQuartile">Premier Quartile: </p>
-            <p id="thirdQuartile">Troisième Quartile: </p>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="../presentation.html"><img src="../CNO/LOGO.svg" alt="Logo Soli'Aude" id="logo"></a></li>
+                <li><a href="../propos/propos.html">À propos</a></li>
+                <li><a href="../graphique/graphique.html">Graphiques</a></li>
+                <li><a href="Indexou.html" class="active">Mapping Score</a></li>
+                <li><a href="#">Clustering</a></li>              
+                <li><a href="../contact/popup.html" target="_blank" onclick="window.open('../contact/popup.html', 'newwindow', 'width=400,height=600'); return false;">Contact</a></li>
+                <li><a href="https://www.aude.fr/" target="_blank"><img src="../CNO/logoaude.png" alt="Logo"></a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="scoremap">
+        <div id="dashboard" style="display: flex; justify-content: space-between;">
+            <div id="sliders" style="width: 30%;"></div>
+            <div id="carte" style="height: 400px; width: 68%;"></div>
         </div>
-        <div id="classement-container" style="overflow-y: auto; height: 150px; width: 68%;">
-            <table id="classement">
-                <thead>
-                    <tr>
-                        <th>Nom de la Ville</th>
-                        <th>Score</th>
-                    </tr>
-                </thead>
-                <tbody></tbody>
-            </table>
+        <div id="statistiques" style="display: flex; justify-content: space-between; margin-top: 20px;">
+            <div>
+                <h3>Statistiques des Scores</h3>
+                <p id="maxScore">Score Max: </p>
+                <p id="minScore">Score Min: </p>
+                <p id="medianScore">Score Médian: </p>
+                <p id="firstQuartile">Premier Quartile: </p>
+                <p id="thirdQuartile">Troisième Quartile: </p>
+            </div>
+            <div id="classement-container" style="overflow-y: auto; height: 150px; width: 68%;">
+                <table id="classement">
+                    <thead>
+                        <tr>
+                            <th>Nom de la Ville</th>
+                            <th>Score</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
         </div>
+        <script src="script.js"></script>
+        <script src="carte21.js"></script>
     </div>
-    <script src="script.js"></script>
-    <script src="carte21.js"></script>
 </body>
+<footer>
+    <img src="../CNO/Footer.svg" alt="Bas de la page">
+</footer>
 </html>
