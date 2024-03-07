@@ -16,7 +16,9 @@ function initializeCalculator(data) {
     for (const key in firstDataEntry) {
         if (key !== 'Libellé' && key !== 'Score') {
             let sliderContainer = slidersDiv.append('div').classed('slider-container', true);
-            sliderContainer.append('label').text(key);
+            sliderContainer.append('label').text(key).classed('slider-label', true);
+
+            let coefficientDisplay = sliderContainer.append('span').text(' Coefficient: 1');
             
             let slider = sliderContainer.append('input')
                 .attr('type', 'range')
@@ -25,7 +27,8 @@ function initializeCalculator(data) {
                 .attr('value', '1')
                 .attr('step', '1');
 
-            let coefficientDisplay = sliderContainer.append('span').text(' Coefficient: 1');
+            sliderContainer.append('hr');
+
             
             slider.on('input', function() {
                 coefficients[key] = +this.value;

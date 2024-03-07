@@ -467,6 +467,7 @@ select {
 .scoremap {
     margin-top: 20px;
     padding: 50px;
+    font: 'Avenir', sans-serif;
 }
 
 
@@ -553,6 +554,12 @@ input[type=range] {
     border: 1px solid #ddd;
     margin-bottom: 20px;
     padding: 10px;
+    font-size: 14px;
+}
+
+.slider-label {
+    font-weight: bold;
+    text-align: center;
 }
 
 #statistiques {
