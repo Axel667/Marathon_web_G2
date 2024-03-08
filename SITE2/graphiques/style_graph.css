@@ -1,0 +1,319 @@
+
+/* Styles de base */
+header {
+    position: relative;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    width: 100%;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.6);
+    padding: 0;
+    border-bottom: 8px solid #ccc;
+    border-image: linear-gradient(to right, 
+        #e97804 0%, #e97804 20%, 
+        #fcf5ef 20%, #fcf5ef 26.7%,
+        #fab613 26.7%, #fab613 46.7%, 
+        #fcf5ef 46.7%, #fcf5ef 53.4%,
+        #8ecae6 53.4%, #8ecae6 73.4%, 
+        #fcf5ef 73.4%, #fcf5ef 80%,
+        #2984ce 80%, #2984ce 100%);
+    border-image-slice: 1;
+    background-image: url('../CNO/Barre_de_naviguation.svg');
+    background-position: center;
+    background-size: 200%; /* Modifier pour "cover" pour une meilleure adaptabilité */
+    margin-top: -15px;
+}
+
+/* Boutons navigation */
+nav ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap; /* Permet aux éléments de passer à la ligne sur les petits écrans */
+    justify-content: center; /* Centrer les éléments pour les petits écrans */
+    align-items: center;
+    padding: 0; /* Enlever le padding par défaut */
+}
+
+nav li {
+    margin: 5px 10px; /* Réduire l'espacement pour les petits écrans */
+}
+
+nav a {
+    text-decoration: none;
+    color: #000;
+    font-family: 'Avenir', sans-serif;
+    font-weight: bold;
+    padding: 8px 20px; /* Ajuster le padding pour les petits écrans */
+    border-radius: 10px;
+    border: 1px solid transparent; /* Simplifier */
+    font-size: 14px;
+    transition: background-color 0.3s, color 0.3s, transform 0.3s; /* Ajouter une transition */
+}
+
+/* Media queries pour l'adaptabilité */
+@media (max-width: 768px) {
+    /* Pour les tablettes et en dessous */
+    nav ul {
+        flex-direction: column; /* Les éléments de navigation en colonne */
+    }
+
+    nav a {
+        font-size: 12px; /* Taille de police plus petite */
+        padding: 8px 16px; /* Padding réduit */
+    }
+
+    nav ul li:first-child a img {
+        height: 60px; /* Réduire la taille du logo */
+    }
+}
+
+@media (max-width: 480px) {
+    /* Pour les mobiles */
+    header {
+        border-bottom: 5px solid #ccc; /* Bordure inférieure plus fine */
+    }
+
+    nav li {
+        margin: 5px 5px; /* Espacement réduit */
+    }
+
+    nav a {
+        font-size: 11px; /* Taille de police encore plus petite */
+        padding: 6px 12px; /* Padding encore réduit */
+    }
+}
+
+nav ul li:first-child a img {
+    height: 80px;
+    width: 80px;
+    height: auto;
+    display: flex;
+    align-items: left;
+    justify-content: space-between;
+}
+
+nav ul li:nth-child(2) a {
+    background-color: #fff;
+}
+nav ul li:nth-child(2) a:hover {
+    background-color: #e97804;
+    color: #000;
+}
+nav ul li:nth-child(2) a.active {
+    background-color: #e97804;
+    color: #000;
+    transform: scale(1.1);
+}
+
+
+nav ul li:nth-child(3) a {
+    background-color: #fff;
+}
+
+nav ul li:nth-child(3) a:hover {
+    background-color: #fab613;
+    color: #000;
+}
+nav ul li:nth-child(3) a.active {
+    background-color: #fab613;
+    color: #000;
+    transform: scale(1.1);
+}
+
+
+nav ul li:nth-child(4) a {
+    background-color: #fff;
+}
+
+nav ul li:nth-child(4) a:hover {
+    background-color: #8ecae6;
+    color: #000;
+}
+nav ul li:nth-child(4) a.active {
+    background-color: #8ecae6;
+    color: #000;
+    transform: scale(1.1);
+}
+
+
+nav ul li:nth-child(5) a {
+    background-color: #fff;
+}
+
+nav ul li:nth-child(5) a:hover {
+    background-color: #2984ce;
+    color: #000;
+}
+nav ul li:nth-child(5) a.active {
+    background-color: #2984ce;
+    color: #000;
+    transform: scale(1.1);
+}
+
+nav ul li:nth-child(6) a {
+    background-color: #fff;
+}
+
+nav ul li:nth-child(6) a:hover {
+    background-color: #d14816;
+    color: #000;
+}
+nav ul li:nth-child(6) a.active {
+    background-color: #d14816;
+    color: #fff;
+    transform: scale(1.1);
+}
+
+
+nav ul li:nth-child(7) a img {
+    height: 60px;
+    width: 60px;
+    border-radius: 30%;
+    padding: 0px;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+body { font: 14px Arial; }
+.dashboard {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 50px;
+}
+
+.viz-container {
+    flex: 1;
+}
+
+#chart-container, #map-container {
+    flex: 1;
+    min-width: 45%; /* Ajustez cette valeur selon vos besoins */
+    height: 500px; /* Hauteur fixe pour simplifier */
+    padding: 10px;
+}
+
+#chart {
+    /* Ajustez ces valeurs selon vos besoins */
+    transform-origin: top left;
+    transform: scale(0.65); /* Réduit le graphique à 80% de sa taille originale */
+}
+
+#divmap, #chart {
+    height: 100%;
+    width: 100%;
+}
+
+#map-container {
+    width: 50%; /* ou la largeur souhaitée */
+    float: right; /* Continue à flotter à droite */
+    transform-origin: top right; /* Change le point d'origine pour les transformations */
+    transform: scale(0.9); /* Ajustez la mise à l'échelle si nécessaire */
+}
+
+.tooltip {
+    position: absolute;
+    text-align: center;
+    padding: 6px;
+    font: 12px sans-serif;
+    background: lightsteelblue;
+    border: 0px;
+    border-radius: 8px;
+    pointer-events: none;
+    opacity: 0;
+
+    
+}
+.zoom {
+    cursor: move;
+    fill: none;
+    pointer-events: all;
+}
+
+.controls-container {
+    display: flex;
+    flex-direction: column; /* Organiser les enfants en colonne */
+    align-items: flex-start; /* Aligner les enfants au début (gauche) */
+    margin-bottom: 20px; /* Espacer le conteneur des contrôles du reste du contenu */
+}
+
+.control-group {
+    margin-bottom: 10px; /* Espacer chaque groupe de contrôle verticalement */
+}
+
+/* Style optionnel pour les sélecteurs et étiquettes pour une apparence uniforme */
+label, select {
+    display: block; /* Assure que les sélecteurs prennent toute la largeur du conteneur */
+    margin-bottom: 5px; /* Espacer légèrement les étiquettes des sélecteurs */
+}
+
+select {
+    width: 100%; /* Assurer que les sélecteurs utilisent toute la largeur disponible */
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+.legend {
+    padding: 6px 8px;
+    font: 14px Arial, Helvetica, sans-serif;
+    background: white;
+    background: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    line-height: 24px;
+    color: #555;
+}
+.legend i {
+    width: 18px;
+    height: 18px;
+    float: left;
+    margin-right: 8px;
+    opacity: 0.7;
+}
+
+.circle {
+    fill: none; /* Pas de remplissage */
+    stroke: darkblue; /* Couleur des contours */
+    stroke-width: 2px; /* Épaisseur des contours */
+}
+.circle:hover, 
+.leaflet-interactive:hover {
+    stroke-width: 3px; /* Plus épais au survol */
+    cursor: pointer;
+    transition: stroke-width 0.2s ease-in-out;
+}
+.control-group {
+    background-color: #f5f5f5;
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+/* Variables pour les couleurs de thème */
+:root {
+    --background-color-light: #FFFFFF;
+    --background-color-dark: #333333;
+    --text-color-light: #333333;
+    --text-color-dark: #FFFFFF;
+}
+
+[data-theme="light"] {
+    --background-color: var(--background-color-light);
+    --text-color: var(--text-color-light);
+}
+
+[data-theme="dark"] {
+    --background-color: var(--background-color-dark);
+    --text-color: var(--text-color-dark);
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+footer {
+    width: 100%;
+    text-align: center;
+    margin-top: calc(35vh);
+}

@@ -16,13 +16,29 @@
             <ul>
                 <li><a href="../presentation.html"><img src="../CNO/LOGO.svg" alt="Logo Soli'Aude" id="logo"></a></li>
                 <li><a href="../propos/propos.html">À propos</a></li>
-                <li><a href="../graphique/graphique.html">Graphiques</a></li>
+                <li><a href="../graphiques/dashboard.html">Graphiques</a></li>
                 <li><a href="Indexou.html" class="active">Scoring Map</a></li>
                 <li><a href="../clustering/clustering.html">Clustering</a></li>              
                 <li><a href="../contact/popup.html" target="_blank" onclick="window.open('../contact/popup.html', 'newwindow', 'width=400,height=600'); return false;">Contact</a></li>
                 <li><a href="https://www.aude.fr/" target="_blank"><img src="../CNO/logoaude.png" alt="Logo"></a></li>
             </ul>
         </nav>
+
+        <div id="infoButton" class="info-button">
+            ?
+            <div id="infoBubble" class="info-bubble">Texte dans la bulle</div>
+        </div>
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                var infoButton = document.getElementById("infoButton");
+                var infoBubble = document.getElementById("infoBubble");
+        
+                infoButton.addEventListener("click", function () {
+                    infoBubble.style.display = (infoBubble.style.display === "block") ? "none" : "block";
+                });
+            });
+        </script>
+        
     </header>
     <div class="scoremap">
         <div id="dashboard" style="display: flex; justify-content: space-between;">
@@ -53,6 +69,7 @@
         <script src="script.js"></script>
         <script src="carte21.js"></script>
     </div>
+
 </body>
 <footer>
     <img src="../CNO/Footer.svg" alt="Bas de la page">

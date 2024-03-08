@@ -6,6 +6,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
+
 function initializeCalculator(data) {
     const slidersDiv = d3.select('#sliders');
     const tableBody = d3.select('#classement tbody');
@@ -17,7 +18,7 @@ function initializeCalculator(data) {
             let sliderContainer = slidersDiv.append('div').classed('slider-container', true);
             sliderContainer.append('label').text(key).classed('slider-label', true);
 
-            let coefficientDisplay = sliderContainer.append('span').text(' Coefficient: 1');
+            let coefficientDisplay = sliderContainer.append('span').text(' Coefficient: 0');
             
             let slider = sliderContainer.append('input')
                 .attr('type', 'range')

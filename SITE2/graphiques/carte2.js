@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", function () {
   var map = L.map("divmap", {
     minZoom: 9,
     maxZoom: 30,
-  }).setView([43.1833, 2.3491], 10)
+  }).setView([43.1833, 2.3491], 9)
 
   L.tileLayer(
     "https://cartodb-basemaps-{s}.global.ssl.fastly.net/light_all/{z}/{x}/{y}.png",
@@ -172,4 +172,4 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   legend.addTo(map)
-})
+});
