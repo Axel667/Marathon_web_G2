@@ -12,7 +12,9 @@ d3v7.json("data.json").then(function (data) {
 
   const tooltip = d3v7.select("body").append("div").attr("class", "tooltip")
 
-  const keys = Object.keys(data[0]).filter(k => k !== "Population")
+  const keys = Object.keys(data[0]).filter(
+    k => k !== "Population" && k !== "Code" && k !== "Libellé"
+  )
   const selectors = {
     x: d3v7
       .select("#x-axis-select")
@@ -144,7 +146,7 @@ d3v7.json("data.json").then(function (data) {
       .append("circle")
       .attr("cx", d => x(d[xValue]))
       .attr("cy", d => y(d[yValue]))
-      .attr("r", d => Math.sqrt(d["Population"]) * 0.7)
+      .attr("r", d => Math.sqrt(d["Population"]) * 0.3)
       .style("fill", d => getDensityColor(d["Population"]))
       .style("opacity", 0.7)
       .on("mouseover", function (event, d) {
@@ -152,7 +154,7 @@ d3v7.json("data.json").then(function (data) {
           .select(this)
           .transition()
           .duration(300)
-          .attr("r", d => Math.sqrt(d["Population"]) * 0.9)
+          .attr("r", d => Math.sqrt(d["Population"]) * 0.4)
           .style("stroke", "white")
           .style("stroke-width", 2)
         tooltip
@@ -163,10 +165,10 @@ d3v7.json("data.json").then(function (data) {
       })
       .on("mouseout", function (d) {
         d3v7
-            .select(this)
+          .select(this)
           .transition()
           .duration(300)
-          .attr("r", d => Math.sqrt(d["Population"]) * 0.7)
+          .attr("r", d => Math.sqrt(d["Population"]) * 0.3)
           .style("stroke", "none")
         tooltip.style("opacity", 0)
       })
@@ -174,15 +176,12 @@ d3v7.json("data.json").then(function (data) {
       .on("click", function (event, d) {
         var alreadySelected = d3v7.select(this).classed("selected")
 
-        svg.selectAll(".highlight-line").remove() // Supprime les lignes pointillées
+        svg.selectAll("circle").style("opacity", 0.1).classed("selected", false) // Supprime les lignes pointillées
 
         if (!alreadySelected) {
-          svg
-            .selectAll("circle")
-            .style("opacity", 0.1)
-            .classed("selected", false) // Réinitialise les cercles
           d3v7.select(this).style("opacity", 1).classed("selected", true) // Sélectionne le cercle cliqué
 
+          // Draw highlight lines for the selected bubble
           let cx = d3v7.select(this).attr("cx")
           let cy = d3v7.select(this).attr("cy")
           drawHighlightLines(cx, cy) // Dessine les lignes pointillées
@@ -190,14 +189,11 @@ d3v7.json("data.json").then(function (data) {
           if (window.selectCommuneOnMap) {
             window.selectCommuneOnMap(d["Libellé"])
           }
-        } else {
-          svg
-            .selectAll("circle")
-            .style("opacity", 0.7)
-            .classed("selected", false) // Désélectionne tout
           if (window.clearMapSelection) {
             window.clearMapSelection() // Efface la sélection sur la carte si nécessaire
           }
+        } else {
+          svg.selectAll("circle").style("opacity", 0.7) // Désélectionne tout
         }
       })
 
@@ -214,31 +210,32 @@ d3v7.json("data.json").then(function (data) {
   // Définir la fonction de mise en évidence après updateChart
   // Après updateChart();
   // Définir la fonction de mise en évidence après updateChart
-  window.highlightPointOnGraph = function (communeNom) {
-    // Déterminer si le cercle était déjà sélectionné
+  window.highlightPointOnGraph = function (communeName) {
+    console.log("Highlighting commune:", communeName) // Debugging
+
     var alreadySelected = !svg.selectAll(".highlight-line").empty()
+    console.log("Already selected?", alreadySelected) // Debugging
 
-    svg.selectAll(".highlight-line").remove() // Supprime les lignes pointillées
+    svg.selectAll(".highlight-line").remove()
 
-    if (alreadySelected) {
-      // Si déjà sélectionné, réinitialiser l'état de tous les cercles
-      svg.selectAll("circle").style("opacity", 0.7) // Rétablit l'opacité pour tous les cercles
-    } else {
-      // Si pas déjà sélectionné, procéder à la mise en évidence du cercle sélectionné
-      svg.selectAll("circle").style("opacity", 0.1) // Réduit l'opacité des autres cercles
+    svg.selectAll("circle").style("opacity", 0.1).classed("selected", false)
 
-      // Mettre en évidence seulement le cercle correspondant au nom de la commune
-      svg
-        .selectAll("circle")
-        .filter(function (d) {
-          return d.Libellé === communeNom
-        })
-        .style("opacity", 1) // Rétablit l'opacité pour le cercle sélectionné
-        .each(function (d) {
-          let cx = d3v7.select(this).attr("cx")
-          let cy = d3v7.select(this).attr("cy")
-          drawHighlightLines(cx, cy) // Dessine les lignes pointillées pour le cercle sélectionné
-        })
+    svg
+      .selectAll("circle")
+      .filter(function (d) {
+        console.log("Checking commune:", d.Libellé) // Debugging
+        return d.Libellé === communeName
+      })
+      .style("opacity", 1)
+      .classed("selected", true)
+      .each(function (d) {
+        let cx = d3v7.select(this).attr("cx")
+        let cy = d3v7.select(this).attr("cy")
+        drawHighlightLines(cx, cy)
+      })
+
+    if (!alreadySelected) {
+      console.log("No matches found for:", communeName) // If no circles highlighted
     }
   }
 

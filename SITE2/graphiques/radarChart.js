@@ -1,33 +1,53 @@
 ;(function () {
-  window.updateRadarChart = function (communeName) {
-    // Find the data for the selected city
-    var cityData = jsonData.find(function (d) {
-      return d.Libellé === communeName
-    })
-
-    if (cityData) {
-      // Assume processDataForRadarChart is a function that processes your city data into the correct format
-      var radarData = processDataForRadarChart(cityData)
-      // Assume your radar chart drawing logic is encapsulated in this function
-      RadarChart(".radarChart", [radarData], radarChartOptions)
-    }
-  }
   var jsonData // This will hold the JSON data
   var medianRadarData // This will hold the median radar data
   var showMedianRadar = false // Flag to toggle median radar chart
+  var selectedCity = null // Holds the currently selected city's name
 
-  // Function to toggle the median radar chart
-  window.toggleMedianRadarChart = function () {
-    showMedianRadar = !showMedianRadar
-    updateRadarChart()
+  window.updateRadarChart = function (communeName) {
+    if (communeName) {
+      selectedCity = communeName // Update the selected city
+    }
+    var cityData = jsonData.find(function (d) {
+      return d.Libellé === selectedCity
+    })
+
+    if (!cityData && jsonData.length > 0) {
+      cityData = jsonData[0] // Fallback to the first city if none selected
+      selectedCity = jsonData[0].Libellé
+    }
+
+    if (cityData) {
+      var radarData = processDataForRadarChart(cityData)
+      var dataToDisplay = [radarData]
+      if (showMedianRadar) {
+        if (!medianRadarData) {
+          calculateMedianRadarData()
+          console.log("Median Radar Data:", medianRadarData)
+        }
+        dataToDisplay.push(
+          medianRadarData.map(function (d) {
+            return { axis: d.axis, value: d.value }
+          })
+        )
+      }
+      d3.select(".radarChart").selectAll("svg").remove()
+      RadarChart(".radarChart", dataToDisplay, radarChartOptions)
+    }
   }
 
+  window.toggleMedianRadarChart = function () {
+    showMedianRadar = !showMedianRadar
+    console.log("Show Median Radar:", showMedianRadar) // Verify toggle action
+    window.updateRadarChart()
+  }
   // Function to update the radar chart display
   function updateRadarChart() {
     // Clear the existing radar chart SVG before redrawing
     d3.select(".radarChart").selectAll("svg").remove()
 
-    
+    console.log("Selected City:", selectedCity)
+    console.log("Data to Display:", dataToDisplay)
 
     var dataToDisplay = [processDataForRadarChart(jsonData[0])]
     if (showMedianRadar) {
@@ -130,6 +150,26 @@
         )
       })
     )
+
+    /////////////////
+    ////////////////
+
+    ///////////////
+
+    ///////////////
+    ///////////////
+    ///////////////
+
+    //////////////
+    ////////////////
+
+    ///////////////
+
+    ///////////////
+    ///////////////
+    ///////////////
+
+    //////////////
 
     var allAxis = data[0].map(function (i, j) {
         return i.axis
@@ -440,30 +480,4 @@
       })
     } //wrap
   } //RadarChart
-
-  window.updateRadarChart = function (communeName) {
-    console.log("updateRadarChart called for:", communeName)
-    d3.json("data_normalised.json", function (error, jsonData) {
-      if (error) throw error
-
-      // Find the data for the selected city
-      var cityData = jsonData.find(function (d) {
-        return d["Libellé"] === communeName // Ensure 'Libellé' matches the property name in your data
-      })
-
-      if (cityData) {
-        console.log("Data found for:", communeName, cityData) // Debugging line
-        // Process data for the radar chart for the selected city
-        var radarData = processDataForRadarChart(cityData) // Ensure this function exists and correctly formats data for the radar chart
-
-        // Clear the existing radar chart SVG before redrawing
-        d3.select(".radarChart").selectAll("svg").remove()
-
-        // Draw the radar chart for the selected city
-        RadarChart(".radarChart", [radarData], radarChartOptions) // Ensure 'RadarChart' and 'radarChartOptions' are correctly defined and accessible
-      } else {
-        console.log("No data found for:", communeName) // Debugging line
-      }
-    })
-  }
 })()
