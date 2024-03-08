@@ -612,6 +612,7 @@ select {
 .axis line,
 .axis path {
     stroke: black;
+    width: 100px;
 }
 
 .axis text {
