@@ -12,8 +12,7 @@ function initializeCalculator(data) {
     let coefficients = {};
 
     // Initialiser les curseurs et les labels de coefficient
-    const firstDataEntry = data[0];
-    for (const key in firstDataEntry) {
+    Object.keys(data[0]).forEach(key => {
         if (key !== 'Libellé' && key !== 'Score') {
             let sliderContainer = slidersDiv.append('div').classed('slider-container', true);
             sliderContainer.append('label').text(key).classed('slider-label', true);
@@ -24,37 +23,45 @@ function initializeCalculator(data) {
                 .attr('type', 'range')
                 .attr('min', '0')
                 .attr('max', '5')
-                .attr('value', '1')
-                .attr('step', '1');
-
+                .attr('value', '0')
+                .attr('step', '1')
+                .on('input', function() {
+                    coefficients[key] = +this.value;
+                    sliderContainer.select('span').text(` Coefficient: ${this.value}`);
+                    updateScores();
+                });
+            
             sliderContainer.append('hr');
 
             
-            slider.on('input', function() {
-                coefficients[key] = +this.value;
-                coefficientDisplay.text(` Coefficient: ${this.value}`);
-                updateScores();
-            });
-
-            coefficients[key] = 1; // Valeur initiale
+            coefficients[key] = 0; // Définir la valeur initiale de chaque coefficient à 0
         }
-    }
+    });
+    updateScores();
+    
 
     function updateScores() {
         const totalCoefficient = Object.values(coefficients).reduce((a, b) => a + b, 0);
-
-        let scoredData = data.map(d => {
-            let weightedSum = 0;
-            for (const key in coefficients) {
-                weightedSum += d[key] * coefficients[key];
-            }
-            let normalizedScore = weightedSum / totalCoefficient;
-            return { 'Libellé': d.Libellé, 'Score': normalizedScore };
-        });
-
+    
+        let scoredData;
+        if (totalCoefficient === 0) {
+            // Traitement lorsque tous les coefficients sont à 0
+            // Par exemple, attribuer un score de 0 à tous
+            scoredData = data.map(d => ({ 'Libellé': d.Libellé, 'Score': 0 }));
+        } else {
+            scoredData = data.map(d => {
+                let weightedSum = 0;
+                for (const key in coefficients) {
+                    weightedSum += d[key] * coefficients[key];
+                }
+                let normalizedScore = weightedSum / totalCoefficient;
+                return { 'Libellé': d.Libellé, 'Score': normalizedScore };
+            });
+        }
+    
         // Trier les données par score
         scoredData.sort((a, b) => b.Score - a.Score);
-
+    
         // Mettre à jour le tableau
         tableBody.selectAll('tr').remove();
         tableBody.selectAll('tr')
@@ -62,11 +69,9 @@ function initializeCalculator(data) {
             .enter()
             .append('tr')
             .html(d => `<td>${d.Libellé}</td><td>${d.Score.toFixed(6)}</td>`);
-
-        // Mise à jour des statistiques
+    
+        // Mise à jour des statistiques et de la carte si nécessaire
         updateStatistics(scoredData);
-
-        // Mise à jour des couleurs sur la carte en fonction des nouveaux scores
         if (window.updateMapColors) {
             window.updateMapColors(scoredData);
         }
