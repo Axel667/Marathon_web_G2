@@ -149,6 +149,9 @@ d3.json('data_clustering.json').then(function(data) {
          .append("th")
          .style("font-family", "Avenir") 
          .style("font-size", "20px")
+         .style("position", "sticky")
+         .style("top", "0")
+         .style("background-color", "#FFFFFF")
          .text(cluster => "Cluster " + (parseInt(cluster) + 1));
 
     // Trouver le nombre maximal de communes dans un cluster
@@ -159,7 +162,7 @@ d3.json('data_clustering.json').then(function(data) {
         const row = tbody.append("tr");
 
         Object.values(communesParCluster).forEach(communes => {
-            row.append("td").text(communes[i] || "");
+            row.append("td").text(communes[i] || "").style("font-family", "Avenir") .style("font-size", "16px");
         });
     }
 }).catch(function(error) {
