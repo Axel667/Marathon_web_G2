@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Carte</title>
+    <meta charset="utf-8" />
+    <!-- Utilisation du CDN pour Leaflet afin d'éviter les problèmes de chargement des fichiers locaux -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"/>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <style>
+        #divmap {
+            width: 900px;
+            height: 500px;
+            border: 3px solid gray;
+        }
+    </style>
+</head>
+<body>
+<div id="divmap"></div>
+<script>
+    // Initialise la carte
+    var map = L.map('divmap').setView([43.1833, 2.3491], 10);
+
+    // Ajoute une couche de tuiles à la carte
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        maxZoom: 18,
+        attribution: 'Données de carte © <a href="https://openstreetmap.org">OpenStreetMap</a> contributeurs'
+    }).addTo(map);
+
+    // Charge et traite les données JSON
+    $.getJSON("data.json", function(json) {
+        var populationData = {};
+        json.forEach(function(item) {
+            populationData[item["Libellé"]] = item["Population"];
+        });
+
+        // Charge et visualise les données GeoJSON
+        $.getJSON("communes-11-aude.geojson", function(data) {
+            L.geoJson(data, {
+                onEachFeature: function (feature, layer) {
+                    var population = populationData[feature.properties.nom];
+                    if (population) {
+                        layer.bindTooltip(feature.properties.nom + ": " + population + " habitants", {
+                            permanent: false, 
+                            direction: 'auto'
+                        });
+                    }
+                }
+            }).addTo(map);
+        });
+    });
+</script>
+</body>
+</html>
