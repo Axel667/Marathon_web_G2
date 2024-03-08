@@ -57,7 +57,7 @@ d3.json('data_clustering.json').then(function(data) {
                           .attr("y", 0 - margin.left + 30)
                           .attr("x", 0 - (height / 2))
                           .attr("dx", "-1em") 
-                          .attr("dy", "-3em")
+                          .attr("dy", "-2em")
                           .style("text-anchor", "middle")
                           .style("font-size", "18px")
                           .text(yValue);
@@ -126,6 +126,42 @@ d3.json('data_clustering.json').then(function(data) {
     // Premier affichage du graphique
     updateGraph();
 
+    // Regroupement des communes par cluster
+    let communesParCluster = {};
+    data.forEach(function(d) {
+        if (!communesParCluster[d.Cluster]) {
+            communesParCluster[d.Cluster] = [];
+        }
+        communesParCluster[d.Cluster].push(d["Libellé"]);
+    });
+
+    // Création d'un conteneur défilant pour le tableau des communes par cluster
+    const container = d3.select("#chart").append("div").style("max-height", "500px").style("overflow-y", "scroll").style("margin-top", "80px");
+    const table = container.append("table");
+    const thead = table.append("thead");
+    const tbody = table.append("tbody");
+
+    // Ajout des en-têtes de colonne pour chaque cluster
+    thead.append("tr")
+         .selectAll("th")
+         .data(Object.keys(communesParCluster))
+         .enter()
+         .append("th")
+         .style("font-family", "Avenir") 
+         .style("font-size", "20px")
+         .text(cluster => "Cluster " + (parseInt(cluster) + 1));
+
+    // Trouver le nombre maximal de communes dans un cluster
+    let maxCommunes = Math.max(...Object.values(communesParCluster).map(communes => communes.length));
+
+    // Ajout des lignes du tableau pour chaque commune
+    for (let i = 0; i < maxCommunes; i++) {
+        const row = tbody.append("tr");
+
+        Object.values(communesParCluster).forEach(communes => {
+            row.append("td").text(communes[i] || "");
+        });
+    }
 }).catch(function(error) {
-    console.log(error);
-});
+    console.log(error);})
+

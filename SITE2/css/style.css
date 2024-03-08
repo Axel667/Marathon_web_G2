@@ -585,11 +585,24 @@ input[type=range] {
 
 
 /* Clustering */
-#chart {
-    margin-left: 100px; /* Center the chart horizontally */
+.cluster{
     margin-top: 40px;
-    width: 100%; /* Adjust the width as needed */
-    height: 500px; /* Maintain the desired height */
+    display: flex;
+    justify-content: space-between; /* Alignement des éléments sur les extrémités (left et right) */
+    flex-wrap: wrap; 
+}
+
+#chart {
+    width: 70%;
+    height: 500px;
+    padding: 20px;
+}
+
+#liste-communes {
+    width: 30%;
+    max-height: 400px;
+    overflow-y: auto;
+    margin-top: 40px;
 }
 
 select {
@@ -605,8 +618,22 @@ select {
     font-size: 12px;
 }
 
-.cluster{
-    margin-top: 40px;
+.table-container {
+    width: 100%;
+}
+
+.table-header,
+.table-body {
+    width: 100%;
+    table-layout: fixed;
+}
+
+.table-header {
+    border-bottom: 2px solid #ddd;
+}
+
+.table-body-container {
+    overflow-y: scroll;
 }
 
 
